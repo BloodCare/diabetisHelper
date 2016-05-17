@@ -17,7 +17,7 @@ namespace MobileFramework.OverviewPlugin
     public class OverviewPluginPageModel : FreshBasePageModel, INotifyPropertyChanged
     {
         private string name;
-
+        private string test;
         public event PropertyChangedEventHandler PropertyChanged;
         public virtual void OnPropertyChanged(string propertyName)
         {
