@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b1ac34e0-f89d-4524-beae-a307792fadf5"
+  name="Softwaremodel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="bb46abbe-d517-47ca-a564-c074914f4642"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3D::"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="03761af0-5639-4a47-bdc8-261fdc02dfc3">
+      <profileInstance
+        Id="cda17590-ad94-4fdf-8eb3-9e6e84890223"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1b721e70-700e-40f6-ab17-4610223771d0"
+        LastKnownName="FreshMvvm"
+        LastKnownLocation="Package_0951.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="da18ee4c-4755-40f6-8ab1-28a6f2fc5eab"
+        LastKnownName="System"
+        LastKnownLocation="Package1_0951.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7523492a-17c9-4df8-837d-914c329c1c55"
+        LastKnownName="Xamarin"
+        LastKnownLocation="Package2_0951.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f50f7e70-6fa4-4490-a461-a2e816876129"
+        LastKnownName="MobileFramework"
+        LastKnownLocation="Package_0952.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="303fb771-fc60-47a3-9dfd-0edd2b49b9e5"
+        name="FreshTinyIoCContainer"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="eee8bef8-93f8-4418-bf26-d037cb823e88"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Type%3DFreshTinyIoCContainer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7fa8f7a3-542c-40b1-a052-fca05d9c66f0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ffe5fc2b-d7b1-4328-acca-996da4ac5274">
+                <propertyInstance
+                  Id="d07d68f8-9005-4532-9c65-b2052420c1a2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="43fc18f4-eedf-4003-b185-2ba8510af360">
+                <propertyInstance
+                  Id="59a67a52-f11e-4e7c-af16-e60c76d021c9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c0b2ba83-7465-4626-a106-f3e9d04aec4f">
+                <propertyInstance
+                  Id="c5cf5f47-a184-4e35-8425-2d271eddb22c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8a81382-3243-4fe5-9a57-e1d3fecfe813">
+                <propertyInstance
+                  Id="1297173d-246f-46d2-8dd9-a4b33d09ad8e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="65d23653-5acb-4c61-8c29-5a580cf748ad">
+                <propertyInstance
+                  Id="50513e2d-6387-424f-8b58-b890f495e28e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9d739dc4-2f1f-498d-bdd3-9630cae5900d"
+        LastKnownName="Interface  to MSM"
+        LastKnownLocation="Package_1120.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ac5bfdad-d43f-4e9a-83af-52b60ccbafc3"
+        LastKnownName="Alarm Module"
+        LastKnownLocation="Package_1121.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7557286c-326a-4c6a-8887-79eda3987866"
+        LastKnownName="Alarm Module"
+        LastKnownLocation="Package_1123.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e5bc8378-2562-4ee9-98da-85f7113ab7e9"
+        LastKnownName="Package1"
+        LastKnownLocation="Package_1000.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

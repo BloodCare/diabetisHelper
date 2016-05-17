@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFramework.Navigation.NavigationPage"
+             xmlns:local="clr-namespace:WorkingWithImages;assembly=WorkingWithImages">
+  <ListView x:Name="listView" SelectedItem="{Binding SelectedItem}"
+    ItemsSource="{Binding NavigationItems}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              
+              <Label Text="{Binding Title}" VerticalOptions = "Center" Grid.Column ="0"/>
+              <Image  Source="{Binding Icon.Source}" Grid.Column ="1"  />
+
+            </Grid>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

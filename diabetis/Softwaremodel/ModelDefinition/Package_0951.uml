@@ -1,0 +1,2165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1b721e70-700e-40f6-ab17-4610223771d0"
+  name="FreshMvvm"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="11098c6c-a1a3-46c8-b0f6-04f0b95c232e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFreshMvvm"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e88b8846-b653-4921-a802-ff1d70b5e0ef"
+        name="FreshBasePageModel"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="25ca3b0f-9597-4f2a-b54f-91eb53cc9bb7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="10bc9137-3e14-4c76-9c70-e8ca2707cddd"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06931cd3-47b5-49ec-973f-412f50ca1b7b">
+                <propertyInstance
+                  Id="e547ebcd-8e9e-4724-a3eb-b980c414bcfb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dfd431d3-cd75-4fce-904b-7b4b3b43e3b9">
+                <propertyInstance
+                  Id="6c9d029f-50d3-4592-a9c8-ae28babae5f1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c94dde5-38d1-453e-a38f-47995dd3a56b">
+                <propertyInstance
+                  Id="e7d0ffcc-1643-4c4b-99f7-b04fc8e9a95e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a50c648-ce4e-4053-856c-31259f461c41">
+                <propertyInstance
+                  Id="cc3a0e73-3315-43fe-84e0-ae730eacd111"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="adffa4f9-ce6f-440a-be2b-2cb00af6c10f">
+                <propertyInstance
+                  Id="650f1a37-25d4-40d2-8e9b-98fed63c4820"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="50c7ee35-589d-4371-83ef-b0690e28e713">
+            <interfaceMoniker
+              Id="6e536265-0d4e-44b7-a422-6240c543b433"
+              LastKnownName="INotifyPropertyChanged"
+              LastKnownLocation="Package4_0951.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="156986e6-bc34-46ae-8f60-8f4aca8340ec"
+            isDerived="false"
+            sourceEndRoleName="FreshBasePageModel"
+            targetEndRoleName="CurrentPage"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="32fa9eb5-595c-4642-a3e5-7c92f03f7ca8"
+              LastKnownName="Page"
+              LastKnownLocation="Package3_0951.uml" />
+            <description>Property CurrentPage references type Page.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a87f21f0-cdb3-480d-af99-a5909dc84474"
+                  name="FreshBasePageModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a8a951a1-ba62-4c29-a990-7fcdf14edaf6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c3e9e205-a2e2-4b75-97c1-512b06908045"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39e25af4-d0f1-435e-a276-81b457840137"
+                  name="CurrentPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="28737842-f692-4be5-aa39-02352c2d7195"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f2c38214-12c4-4605-9696-83273f0b98f0"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="67ae3bdb-5a93-40eb-b44a-4e9cb7f32421"
+            isDerived="false"
+            sourceEndRoleName="FreshBasePageModel"
+            targetEndRoleName="CoreMethods"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="f79934cb-a1b8-4cb8-b9be-5b2f392bbebb"
+              LastKnownName="IPageModelCoreMethods"
+              LastKnownLocation="Package_0951.uml" />
+            <description>Property CoreMethods references type IPageModelCoreMethods.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff842824-130f-4671-924f-18adce8c1afd"
+                  name="FreshBasePageModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7d176b6f-d238-4c49-b450-b39ab72a51ce"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="00d2ae8f-810e-4b13-9140-670ac74e5dc0"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5c640bd6-29b5-4758-a430-0309a01678c1"
+                  name="CoreMethods"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e0d7d7f9-0779-485b-9359-b8a0884a35e7"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ad74bd7a-f115-445a-8e5a-7b08f999887f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="97222d51-107a-49a5-8b40-3e43922d7dc0"
+            name="PreviousPageModel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="630c775e-d92a-419d-bec7-180a47d67e2e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3DPreviousPageModel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="941ec9b5-384e-420e-bd00-5c9b95474a23"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a97c07fe-1e40-42ae-b924-bd71e881ede1">
+                    <propertyInstance
+                      Id="d4df0b10-acd9-45f2-a72e-23f7491de3a3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8315602d-c032-4d88-9b98-01c09418651d">
+                    <propertyInstance
+                      Id="52a7c3dc-3128-4dd8-a55d-12851113a6f8"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2a67b2e-4071-4026-942d-bbe7a2d41f8c">
+                    <propertyInstance
+                      Id="8f496e10-b4ad-4943-bda3-00220813f72e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cd714bf-d97c-41d1-a34e-9e6976eeeb4d">
+                    <propertyInstance
+                      Id="400b5cd1-58c9-4f11-9f1e-7e5f52e89005"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="733607d2-2fe2-49e4-aac5-8a70be02eb5b">
+                    <propertyInstance
+                      Id="b24f5300-40fc-4b16-afcd-7471e9effa2b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6f5a2c9-5cc9-40d5-b21d-6c8f95248fb4">
+                    <propertyInstance
+                      Id="75a18116-2d32-4a88-960a-afdea15306a4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11a85a4e-8f78-4017-a2fa-ced44c05cb80">
+                    <propertyInstance
+                      Id="b8d0b8bf-4f06-426d-a372-444595b34018"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="e88b8846-b653-4921-a802-ff1d70b5e0ef"
+                LastKnownName="FreshBasePageModel"
+                LastKnownLocation="Package_0951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a6fe2a63-4891-4a39-b617-2680fc75b683"
+            name="CurrentPage"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a1d013b2-2f06-460b-b2f2-738c8f945f31"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3DCurrentPage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1cf3ff42-c8ff-4ef8-bab5-2cb99b42aa5f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74a1a3c6-ba04-4e86-9b94-838f0e47096d">
+                    <propertyInstance
+                      Id="d76ae6b3-3ae1-4916-9e03-da01a563995e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb588abc-22fb-4e93-a181-0578fcfa8788">
+                    <propertyInstance
+                      Id="db777b55-a016-49c8-a5cf-9aa69331693e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb977203-94dd-40db-95f5-ef2b1a061bcf">
+                    <propertyInstance
+                      Id="cee3cae3-6939-49b4-8f86-8d88647b05b9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71f531f9-2fae-4fd3-83d1-f72f38496274">
+                    <propertyInstance
+                      Id="7a7e935b-c032-46c9-b7fa-2dbe6e2da177"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7968ff1-de21-4771-aed9-7c2dd82ca672">
+                    <propertyInstance
+                      Id="9db07692-263d-41f8-8e54-f304fa43e078"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2be44ac5-8086-4d1b-abca-fddde902fac0">
+                    <propertyInstance
+                      Id="9cf461cd-5d48-48e9-81a6-5b556d255ffd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="766c0638-57e2-4e61-b1fd-d9b5f80b3fe5">
+                    <propertyInstance
+                      Id="35baeb8b-e20a-4328-aed0-6cb9d0081634"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="32fa9eb5-595c-4642-a3e5-7c92f03f7ca8"
+                LastKnownName="Page"
+                LastKnownLocation="Package3_0951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1e494cf2-53b2-4be6-9815-2eb845bcba10"
+            name="CoreMethods"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e5741914-8f11-415d-8bff-0ca8ce02b46b"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3DCoreMethods"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="28ffe64e-b08e-4585-b9f7-d2b6d75422f2"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df49c6c3-d8c6-4e0d-939a-75f68ae1ae6c">
+                    <propertyInstance
+                      Id="8e100056-f742-4863-8c86-c7c3925caa9e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4730006-f09e-4590-87c4-52072abf5077">
+                    <propertyInstance
+                      Id="8f87f067-82b1-47c1-bd5f-fac4b8f70212"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4623bb1-32d5-49b0-875c-af3910529bb3">
+                    <propertyInstance
+                      Id="a8531b66-e10c-4b58-8d5a-46300e4f7614"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2d1a4d8-d86c-4914-b58c-f744dc0f5aab">
+                    <propertyInstance
+                      Id="2dd03bea-2eea-461d-9b63-a2b9755649b0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb4ff206-a437-4a39-8058-f3c15a67a064">
+                    <propertyInstance
+                      Id="afdfb9d5-1f88-448a-817a-260c715a6fad"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5adadbe9-cf5b-4b03-aeac-0abc0d6b81d3">
+                    <propertyInstance
+                      Id="a6776448-5fc3-4053-bf2e-41d7dc3cdd5d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="455964de-489c-4360-803b-02dde48e8556">
+                    <propertyInstance
+                      Id="c2695f92-b204-4649-b8df-943354d4d336"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="f79934cb-a1b8-4cb8-b9be-5b2f392bbebb"
+                LastKnownName="IPageModelCoreMethods"
+                LastKnownLocation="Package_0951.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="14454cbf-b3dd-46cc-b7ba-6f2aa929dac0"
+            name="PropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d170ce60-db0b-4b89-a6b7-b5321edfbae2"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3DPropertyChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="479a4c17-d8df-433b-aa56-1b575823124f"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="478b4b72-4d4d-473c-bab1-5639a9ddb767">
+                    <propertyInstance
+                      Id="4e47529a-ead1-4a5c-b9a6-8983012ecd51"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="342d328c-ce51-400d-a960-2e5f957079db">
+                    <propertyInstance
+                      Id="405504f6-4896-4d25-9699-cd3241a0123c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bb75aa0-24d9-4fcc-9147-ba0304a5d265">
+                    <propertyInstance
+                      Id="4922029e-56ef-48b9-8577-30dbf53458c5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d62ae6b1-b20d-4df2-87ae-1c71de109b2e">
+                    <propertyInstance
+                      Id="8fc47dd2-837a-4487-a509-86fadae6ad5f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22f48fc2-2447-44a3-9546-a63a650e3510">
+                    <propertyInstance
+                      Id="f4f08212-35ba-4b0c-a8f0-351ffb28c120"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b5684f7e-4b9a-408a-af08-05703603856b"
+                LastKnownName="PropertyChangedEventHandler"
+                LastKnownLocation="Package4_0951.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="78f92ebc-5fd6-4f46-a58b-b6193b84b9b1"
+            name="ReverseInit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9aa92213-25ac-4486-ba67-019d6f19d4a3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DReverseInit OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="11fd2d57-d092-4f42-a30f-7c56abbdb8a3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7384215-d0c0-4182-aeae-4e84c0f26bfc">
+                    <propertyInstance
+                      Id="26add36f-ad35-4dc7-994c-1572f872b1b1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2d74601-3a40-4285-9dc8-7ed4685b87f4">
+                    <propertyInstance
+                      Id="8cdc1765-ee17-4f38-86b7-a558269dfa79"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d79cd3bd-267d-489e-87f0-3e74f2d5747d">
+                    <propertyInstance
+                      Id="31373d70-4c9a-43a3-abbc-795d31ab44d2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0744633d-c0a3-450a-9247-84667a47f9ad">
+                    <propertyInstance
+                      Id="e9752b65-62b7-4958-9f70-6441833d9b62"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c7d0856-05e4-47b0-b040-814b5130fb77">
+                    <propertyInstance
+                      Id="9963a6ef-87e7-48b1-8905-ef5de48ab902"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f9ae07e-fadb-49c3-b54b-31234087fa14">
+                    <propertyInstance
+                      Id="c6fae6b7-6933-4d5a-b983-61f6ff78b4de"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2c089531-3e8b-4325-8a14-c029b685dcce"
+                  name="returndData"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="91f245cc-a953-4566-b05f-d15a0a2d1505"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DReverseInit OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DreturndData"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="562dab6e-727d-410d-9eb8-8a9481256397"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d1ee48af-4cd1-4f70-b57e-5d44792a9457"
+            name="Init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a1b58a0c-4463-4c5a-9a8b-1f0288f5042c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DInit OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1db46adc-c1d8-4c4d-a107-da9de4443b09"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7928f7e5-cb9c-48f0-a592-b9ea09ecd69d">
+                    <propertyInstance
+                      Id="2c96902e-8992-40f8-a4fc-5e799179004e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="762d1171-5fce-40eb-a368-e698e8ab2ae3">
+                    <propertyInstance
+                      Id="5f28db10-cd0e-4109-a484-d0e7f1e4219f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52b803e9-1341-46ee-b4c8-202c4c5cb1a9">
+                    <propertyInstance
+                      Id="f9a31b71-9d62-4fbb-b8c6-cbf34a7b22f2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6464a596-068c-4856-812e-d58e0545f5b1">
+                    <propertyInstance
+                      Id="8eb18356-756b-47c8-be03-43a390a126e4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fddcaa7c-1051-442c-8078-6a2fcabfb862">
+                    <propertyInstance
+                      Id="2a68b56e-94b7-4f76-a803-73e75e785590"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c310c8bd-1c85-4e5a-8ae5-eb395edcc070">
+                    <propertyInstance
+                      Id="6c1d13f5-cbd0-4b66-8e85-25c4b989457c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f5ac7e0-e04f-4c2b-8d2f-950ebd34f13c"
+                  name="initData"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9c5402aa-c373-40a9-91f3-c781928463a7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DInit OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DinitData"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="562dab6e-727d-410d-9eb8-8a9481256397"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cfb77953-84ba-4e4c-823c-862508437cd8"
+            name="RaisePropertyChanged"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0fc70248-fd2a-46b6-b69d-99c8a5ff9766"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3f8b9a98-fcea-4511-8a73-cbd375925de5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01966139-aafc-4c96-8ed0-a46574a969f9">
+                    <propertyInstance
+                      Id="7aa9a4f1-8e51-424c-88f5-294de948798a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4d9dd57-a827-4cd3-9beb-43293998c07d">
+                    <propertyInstance
+                      Id="6e9ff43f-7834-4868-8937-002cfa21ddb4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5eb61c4-2452-4308-85d6-8af4aadbfa48">
+                    <propertyInstance
+                      Id="d9b1c18c-ea97-481e-8a5e-2cd1cf08f877"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57643137-b538-4029-92bb-7f52601d5dde">
+                    <propertyInstance
+                      Id="17199e88-b62d-4955-8a78-374471c84dd7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12c7b244-6e16-4f1a-803d-eed4e7f46a13">
+                    <propertyInstance
+                      Id="08c0f5b2-91e5-4a63-a98e-0a0bd32dce3d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52307fc1-dcdd-4904-a75e-f961a238ee17">
+                    <propertyInstance
+                      Id="025e2c1e-4527-4dc4-bea8-9950a5dc5399"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="050f1aab-6d13-48dd-ad62-acbb722db450"
+                  name="propertyName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ecc67e60-151d-41cb-8bbd-06f7a65d713a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DpropertyName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e069a0aa-7fd5-4d84-9766-e4d2f942372b"
+                      LastKnownName="String"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0dfe57f9-e678-4cde-a8ad-94f25d9ef59f"
+            name="WireEvents"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c49c594e-0058-49c5-bf23-07f133bf3800"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DWireEvents OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2Fpackages%2FXamarin.Forms.1.5.0.6396-pre1%2Flib%2Fportable-win%2Bnet45%2Bwp80%2Bwin81%2Bwpa81%2BMonoAndroid10%2BMonoTouch10%2BXamarin.iOS10%2FXamarin.Forms.Core.dll Namespace%3DXamarin.Forms Type%3DPage)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="227b3a90-75e1-4eb6-8cc7-5d6049eb9034"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b77d6b4-f611-4a3f-a78e-fc9c65df2cc8">
+                    <propertyInstance
+                      Id="a1c87b33-a2c6-4486-b344-a34167c34555"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3939dba-4699-4ab4-ab58-b3f04e8a2843">
+                    <propertyInstance
+                      Id="4407ae26-f592-4fd1-aca1-a77bcce7f9fc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d10eb86-e9eb-41cb-a63d-821498e2ae75">
+                    <propertyInstance
+                      Id="5f7bef21-238a-424a-92fb-4980d348d1da"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fd426e1-01ba-4279-a263-b8772df24a63">
+                    <propertyInstance
+                      Id="b2d93d4d-ccbf-45b7-ae17-661e671e1213"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3772780a-ccdf-47a7-8965-a49dca95fa7f">
+                    <propertyInstance
+                      Id="d0ba50c1-eb21-4767-baba-ded45affc4c4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f212306-7ddd-4b85-955f-c31fe59d4efd">
+                    <propertyInstance
+                      Id="821490d7-bfee-44da-804c-112ee9eb4793"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10031789-7834-44e6-9049-4fd98e7bd66f"
+                  name="page"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="55d19c28-116a-47fb-b1f0-9485c981e99d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DWireEvents OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2Fpackages%2FXamarin.Forms.1.5.0.6396-pre1%2Flib%2Fportable-win%2Bnet45%2Bwp80%2Bwin81%2Bwpa81%2BMonoAndroid10%2BMonoTouch10%2BXamarin.iOS10%2FXamarin.Forms.Core.dll Namespace%3DXamarin.Forms Type%3DPage)]) ParameterIdentifier%3Dpage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="32fa9eb5-595c-4642-a3e5-7c92f03f7ca8"
+                      LastKnownName="Page"
+                      LastKnownLocation="Package3_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73a9e878-fce8-4c0c-90c3-de38c6aac6e8"
+            name="ViewIsDisappearing"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="23863166-7870-486a-a0c6-3f8fbcfb2785"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DViewIsDisappearing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="efc11e53-30b4-4e8f-9171-578857cd9381"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4254ba1-c16d-4bf6-bec3-09028988b466">
+                    <propertyInstance
+                      Id="5cc65b7a-2686-41de-81f4-36e846ffff15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4d084ef-ec7a-4e67-94ed-0c523dc6064d">
+                    <propertyInstance
+                      Id="7597131e-a80d-4ec0-881d-24c730610c93"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1151441e-6191-4ff9-993e-f4bdd8d7381a">
+                    <propertyInstance
+                      Id="a9d965c0-ff0c-4803-a185-7707202e20b0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fedf5d5c-f69d-42e7-b97e-cad482456fa1">
+                    <propertyInstance
+                      Id="c447acc2-c563-4865-9bab-367057dccab1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a8b3a138-ccaf-4e72-a3ad-3d00e9afff5a">
+                    <propertyInstance
+                      Id="f2604ebf-8a9b-482a-a717-4240d81baeb1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="419420b1-3b7a-43d6-aba6-5a0abd655e94">
+                    <propertyInstance
+                      Id="32e7883f-40de-42b5-81b4-735339c1d541"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5502d826-fb31-47be-a3a0-f8ae4b8ef160"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="30fd69c4-f5e5-45a6-842b-7ae47eaf290a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DViewIsDisappearing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="562dab6e-727d-410d-9eb8-8a9481256397"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="67b02066-b9ed-4928-8073-89b7b2b16998"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9cb34235-fec6-4458-a8db-1188de058431"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DViewIsDisappearing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d476ce93-93a4-4b61-b0ce-fd704493ac05"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3e5be54d-06e7-46b9-b08d-1c12e4097ff6"
+            name="ViewIsAppearing"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8f475695-2095-4370-acbd-580201982f68"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DViewIsAppearing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="573b32a7-ae28-4782-9641-c34781ee64f0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a45c099e-4a7f-4282-b0bf-744bd7fe3422">
+                    <propertyInstance
+                      Id="ce4706e1-8470-425f-8c83-8dbee253e316"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58df50de-84f3-4cd1-993b-7706f4d14619">
+                    <propertyInstance
+                      Id="3ad490d0-9a50-45a2-b893-7e037f112843"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce226599-e70f-4545-8b4a-edb77b9d209c">
+                    <propertyInstance
+                      Id="fea98e54-643e-46dc-bb92-9410eded6a9d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0276526d-d731-4618-902a-4db8d8805bb7">
+                    <propertyInstance
+                      Id="af09b069-1f82-4c3a-9d00-24a894fa6ded"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbefc283-9c37-4424-835b-c0bf16bd3b15">
+                    <propertyInstance
+                      Id="4018a6f6-2226-41f8-86d8-396ddb276f30"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4535b419-11cd-45b7-ac6f-789b09ca7378">
+                    <propertyInstance
+                      Id="0a6559a4-705f-4ec7-9308-76f3b82cda6e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da97b541-b359-4ada-8126-e54e3e7217b8"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="04225999-cf26-492c-9fc7-20252f101ab7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DViewIsAppearing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="562dab6e-727d-410d-9eb8-8a9481256397"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b555b61b-aab3-4c36-9295-adb6d7eedc48"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f35a7976-49a5-4756-84a6-d97df6827ecd"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D(Name%3DViewIsAppearing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d476ce93-93a4-4b61-b0ce-fd704493ac05"
+                      LastKnownName="EventArgs"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6ff4e9fc-1c26-4f7f-94f0-245dac41bff3"
+            name="FreshBasePageModel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="384922ba-d893-4c0e-9b02-19c5520c48bf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshBasePageModel Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b7dd7619-7fd4-4db3-a004-0a94610b70f9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f92de5f4-6b2d-471b-b7b3-4682fa3b303e">
+                    <propertyInstance
+                      Id="fa130901-f061-40ff-9ccd-5ce471e5d6a5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7fd0df3-3e0b-46ed-a32f-622adc89087f">
+                    <propertyInstance
+                      Id="43d92203-67b3-4ffb-b2da-0eb7921fb477"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fece6bd6-6d21-48d8-8c0a-a10e973e99dc">
+                    <propertyInstance
+                      Id="b98914b7-8330-4bb5-9ba6-8abf391517f9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c862f70-a337-48bc-925d-14f56061c17a">
+                    <propertyInstance
+                      Id="f494bfc8-59af-44e3-8e0d-506bb4e68426"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="822fc54a-bc0e-48a8-805e-8f8cca639d4b">
+                    <propertyInstance
+                      Id="bba9a17b-7120-448a-804e-8ef438d8bac3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d49425c-a1b6-43b0-9804-f7abbf42944b">
+                    <propertyInstance
+                      Id="5319d52e-3a1b-4297-be08-04eecce73897"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f79934cb-a1b8-4cb8-b9be-5b2f392bbebb"
+        name="IPageModelCoreMethods"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="c0414c91-2457-4c95-97d5-646ad773b656"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DIPageModelCoreMethods"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="657ace93-b1ad-411a-9f6f-af81c9b02932"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11ab230b-fb1e-45a5-89d2-342a978105ad">
+                <propertyInstance
+                  Id="52f662a3-eb50-4df5-9cb4-01e3eed278fa"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="87ad5128-cbec-4f06-aee7-225ccec170b4">
+                <propertyInstance
+                  Id="11131bf2-b2f8-48dc-92b8-37321b9db6f1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="81069214-1d16-4dd8-9d46-100dbf065b42">
+                <propertyInstance
+                  Id="617b2f8d-40f1-4502-9b67-86e64636c01e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3583af5c-2148-4bf1-bcbb-c01b56071ec1">
+                <propertyInstance
+                  Id="fb6d7ea2-fb84-4a6e-8382-a4bbf200c236"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="27d43591-03b9-4244-943e-09ab8f2246a8"
+        name="IFreshNavigationService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="7d66f701-79e0-475f-bf8c-bb3ff1e76a76"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DIFreshNavigationService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="af64d626-dd6a-43bb-a644-35c285fc52c1"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="631e0b82-c2c8-4965-b762-589ec2b0112c">
+                <propertyInstance
+                  Id="ec17a84f-b762-40fc-b2c1-b21e66d2e4ad"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83024fd5-d247-44a7-b402-95292adaa14c">
+                <propertyInstance
+                  Id="530f5246-4b51-46f1-9ea8-a96c245057cf"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2fbe606-3db3-4d33-8554-515e0e02ddee">
+                <propertyInstance
+                  Id="07d4f5c3-cf31-4e22-87a3-72b34a3aae05"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="942d4cdf-3bfb-49b9-adc7-9662fc11943a">
+                <propertyInstance
+                  Id="d7b6c218-a7a3-428c-9b6e-d2daeae9bb80"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4b232fab-fd00-4235-86b8-dd5ecef6a152"
+        name="FreshIOC"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ed72f248-3e42-4ccd-a1b6-5baaeccbd99e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshIOC"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6d436e6c-e233-4376-9c1d-ac0fb6d6384d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fa3843a1-77a6-4007-ab0d-8b1949205c2d">
+                <propertyInstance
+                  Id="d83f05d7-e626-4c21-876f-9d40b03de55c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="db1c7f56-bed8-4ae5-ac98-03840626508a">
+                <propertyInstance
+                  Id="cb81ff2a-fd82-4e9f-be79-1a08e71c8162"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9ba9a87-3ace-454c-a35d-ce8dee63f832">
+                <propertyInstance
+                  Id="9b2d1a67-179f-4489-9aaa-f1ac2004b932"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="543dc045-9975-4bb1-9a38-0d5ee2d20be2">
+                <propertyInstance
+                  Id="0be5d0a4-f999-43b5-a9d1-826504e1fd6a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fe7be918-8e1a-4368-a35b-2b63f38d5c87">
+                <propertyInstance
+                  Id="0d731757-f060-4a24-a4e9-3eb8b806c577"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="c0c0e03a-37e9-4b64-bdaf-976e8d558e6e"
+            isDerived="false"
+            sourceEndRoleName="FreshIOC"
+            targetEndRoleName="Container"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="303fb771-fc60-47a3-9dfd-0edd2b49b9e5"
+              LastKnownName="FreshTinyIoCContainer"
+              LastKnownLocation="Softwaremodel.uml" />
+            <description>Property Container references type FreshTinyIoCContainer.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfe284e8-118a-4134-b152-a5e5c6e3b8cb"
+                  name="FreshIOC"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="59a96cc2-de68-408a-958c-e595f00160a1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7f8b9175-592f-4df2-afc0-fd581066eeba"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8eb7fe3f-601a-409b-83c4-3d4d9495afbc"
+                  name="Container"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a0a5cbb1-3f2a-42b1-91bf-2985640d757d"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0cc4e694-d8c0-4735-87a6-557c0eff1287"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c32e0556-aad7-40f7-ac85-3c803e735a39"
+            isDerived="false"
+            sourceEndRoleName="FreshIOC"
+            targetEndRoleName="IPluginCollector"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="ea189b32-85d0-45f8-8085-a488c3a1f350"
+              LastKnownName="IPluginCollector"
+              LastKnownLocation="Package7_0952.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0edd979e-e22e-4ab4-a9e2-053e7e9bb07c"
+                  name="FreshIOC"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="19cad4c8-b12a-4b65-ba1b-63734d5e14fc"
+                  name="IPluginCollector"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1c1d2352-667d-4d3d-97fd-f0e6c27b9c32"
+            isDerived="false"
+            sourceEndRoleName="FreshIOC"
+            targetEndRoleName="IGlobalModel"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="b9e2e570-099f-4488-8b3f-bc288b4b6a19"
+              LastKnownName="IGlobalModel"
+              LastKnownLocation="Package2_0952.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2dd9abf6-5438-4734-ad1a-a2203f6b548b"
+                  name="FreshIOC"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17d05450-5ed7-4f79-926a-1d7d98218bbe"
+                  name="IGlobalModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f7709997-c7b5-4b62-9708-4888d3b06054"
+            name="Container"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fea993e7-5c7f-4de3-9a3f-ffc8f0bdcec3"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshIOC Member%3DContainer"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="78bc3652-e2ab-43de-b8bb-8cbde58e3a77"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87e7ae42-175e-454b-877b-9128032b362c">
+                    <propertyInstance
+                      Id="b07974f0-c370-405c-b473-ce87afc8ed0b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c893a52-6372-4211-854d-62d54044906b">
+                    <propertyInstance
+                      Id="8cb9d125-3987-4eb7-8276-6d30205475de"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28c42354-81ca-449d-a31c-36f83f4172ec">
+                    <propertyInstance
+                      Id="1224ba6b-5dbe-4f24-b831-cb3fa4ae901f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f235162f-205b-4de4-9221-61b82938a09e">
+                    <propertyInstance
+                      Id="412ca776-2d8e-4e9b-a7d7-e3df451bb92d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf74b7b5-5918-494c-bb10-62a45b236621">
+                    <propertyInstance
+                      Id="d7e0dc30-ef93-44e6-a7b2-fb870f5cdbff"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b43f88b2-baed-4842-8e26-4e7df114abb9">
+                    <propertyInstance
+                      Id="29bb04f6-0736-47f3-bb8b-276f830d5db4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b195b4b-1da2-4581-8f03-4ef8b2f5fd74">
+                    <propertyInstance
+                      Id="80c87027-0223-4edd-9906-409782ea2f80"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="303fb771-fc60-47a3-9dfd-0edd2b49b9e5"
+                LastKnownName="FreshTinyIoCContainer"
+                LastKnownLocation="Softwaremodel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8075f39a-7964-49bd-aa55-34b7cc1fc458"
+            name="FreshIOC"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c0abb4ab-9491-4e8d-b31f-30f7f1a4f2ed"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshIOC Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="00835d80-225c-4d1c-b676-ff9726f7d200"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99765ded-f45b-48c5-b6dc-12ac93a7963f">
+                    <propertyInstance
+                      Id="7f24c4d2-692c-4fa4-9aa3-3dec54ecb6a8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84f0ffb7-bfc9-4406-a9fa-15cf88002c1f">
+                    <propertyInstance
+                      Id="8cfa49bf-79a3-44e7-90cc-8479f58290cd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d45a18c-c482-45e5-a2e8-172eab1019b3">
+                    <propertyInstance
+                      Id="6d85bef6-8a29-419e-8915-4850bf89894c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af30b645-a98f-44e3-9748-b0e5fdf551b5">
+                    <propertyInstance
+                      Id="3e7f057c-187f-49a6-9fcf-9998675052ae"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="295195be-25d3-4958-b13a-36b053e59c14">
+                    <propertyInstance
+                      Id="9788cb66-37fa-47fb-bd16-43c5f462bdad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af62c3f5-d4a2-4055-8d9a-e470e7c93e71">
+                    <propertyInstance
+                      Id="f1375c28-4aba-45b0-98f1-be779b7a9b6f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f358ccbe-33b4-4af6-9f84-97a0badced64"
+        name="FreshPageModelResolver"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f6548212-c1aa-4edd-9ea0-4586bf8b9eec"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8fd50973-4691-4205-bfd2-5b98c069e80f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9acc57d6-c5da-4b60-9d24-b790aeb4802c">
+                <propertyInstance
+                  Id="ce3e0a62-26b4-4f18-befe-03c2220dcf94"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ebce8c52-6ca7-40e0-b3d4-ca41280f3cf4">
+                <propertyInstance
+                  Id="94faf61c-adb2-4493-97c6-f4cfab5183a9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b70fe295-8152-4f3b-b996-2bc0d52e13eb">
+                <propertyInstance
+                  Id="2f3dc0ab-77db-4d56-a4f9-d3fc5021d28b"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="077821b0-f07b-4f48-b63f-78481eec0946">
+                <propertyInstance
+                  Id="e79f4cb9-7057-4c73-98c0-457d9dac35ee"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5718e1db-4406-4b13-9f0c-7a58e0a1ef6d">
+                <propertyInstance
+                  Id="670487a1-c3da-41ee-b0cd-98a960c96551"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="3c02c231-4331-43da-811d-02c2ecfbecab"
+            isDerived="false"
+            sourceEndRoleName="FreshPageModelResolver"
+            targetEndRoleName="AlarmPluginPage"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="feb137d5-f773-43fb-976b-00d4e514750f"
+              LastKnownName="AlarmPluginPage"
+              LastKnownLocation="Package_1121.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2c4910b-b4d6-4432-9363-dc7fc9d17fa3"
+                  name="FreshPageModelResolver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2734b067-2407-4240-9f07-0dd224fa81cb"
+                  name="AlarmPluginPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1c670db0-e3b2-42fc-babc-97b8ea7ca9de"
+            isDerived="false"
+            sourceEndRoleName="FreshPageModelResolver"
+            targetEndRoleName="NavigationPage"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0f3aea82-7303-4658-99e1-7c428148fffa"
+              LastKnownName="NavigationPage"
+              LastKnownLocation="Package9_0952.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1625df2-9264-4559-868e-31605b3b3322"
+                  name="FreshPageModelResolver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b83e988-d10b-46d2-9bba-ca5a4fc2a009"
+                  name="NavigationPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="30112f6e-190d-40f8-a93c-4a7af889b087"
+            isDerived="false"
+            sourceEndRoleName="FreshPageModelResolver"
+            targetEndRoleName="MainPage"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="26b909f4-7e75-45ec-8d82-5794803c2018"
+              LastKnownName="MainPage"
+              LastKnownLocation="Package6_0952.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8ff893ac-4ef9-494a-8e5d-3200e5d3918b"
+                  name="FreshPageModelResolver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e68a232-eb1c-4a93-8912-b05f664a7023"
+                  name="MainPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dcb8a7ac-04c6-406f-8bfa-330013e0606b"
+            isDerived="false"
+            sourceEndRoleName="FreshPageModelResolver"
+            targetEndRoleName="AlarmListPage"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="461145fb-d2da-4e14-96f4-cf793237040f"
+              LastKnownName="AlarmListPage"
+              LastKnownLocation="Package_1121.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e4f6ce2-b21b-4cbb-aa7f-2d5531ed1aa3"
+                  name="FreshPageModelResolver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf33cd16-e6d5-42a5-a3d4-cbf36d02d5d8"
+                  name="AlarmListPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="64b211f0-1c9a-4ae5-bb70-8dcbb4960dc8"
+            isDerived="false"
+            sourceEndRoleName="FreshPageModelResolver"
+            targetEndRoleName="OverviewPluginPage"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f0155b08-c599-4ab7-a281-416805f5203d"
+              LastKnownName="OverviewPluginPage"
+              LastKnownLocation="Package_1008.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9ba3c3b8-9093-428b-bd00-79de3ac25b57"
+                  name="FreshPageModelResolver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d6c43ec-6908-4158-aa70-3b33fd4b6eaa"
+                  name="OverviewPluginPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="08dc966c-9a6d-432d-8344-971cfc329dab"
+            name="ResolvePageModel‎&lt;T‎&gt;"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="80ca9c1b-b756-467f-9cb8-33e5d2a168ba"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1)"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e98fabfd-24f7-4351-ad34-9dff735c4033"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f66c2ac7-27b6-400b-bb36-01c85bb766ef">
+                    <propertyInstance
+                      Id="fb873f39-6438-415d-b451-03b21e1d153b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c0bb916-06ea-4389-acab-d59af33cdde9">
+                    <propertyInstance
+                      Id="9cf7f9d0-90a6-468a-8247-6c17a839a42c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cd2358a-08f1-4177-942b-4c61bc864354">
+                    <propertyInstance
+                      Id="13197b70-719f-49cc-acf1-9ea6c86f7d42"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4420f51-4fc1-4fe2-84f8-4a2caf4fc0c4">
+                    <propertyInstance
+                      Id="3500561c-a861-40b5-a78f-f69001658840"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48a346b8-8a78-4074-9d99-48c015812f75">
+                    <propertyInstance
+                      Id="cedbb039-6da0-4805-98c5-92256dfdc20b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2906222c-acdc-4d7c-8537-7766e184d96a">
+                    <propertyInstance
+                      Id="2c15ecb1-0a75-4bff-aa80-e3ffd86e5dc6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8fc6e613-7dcd-42f6-8386-4a2d0e5e7230"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="32fa9eb5-595c-4642-a3e5-7c92f03f7ca8"
+                      LastKnownName="Page"
+                      LastKnownLocation="Package3_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e75f512b-d85d-4da9-b1ff-5ebf1ca6d937"
+            name="ResolvePageModel‎&lt;T‎&gt;"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4368f229-68e7-4087-9521-381b5e54b8c9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a0cf71b0-aa73-474c-957e-af4b14910e5a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f5e0b5f-7d83-4a54-b693-e99d19abc67a">
+                    <propertyInstance
+                      Id="1dfaf6cf-d66c-431c-aea5-aa695206cd05"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0906066d-6466-4ec9-839f-cd619a8fec48">
+                    <propertyInstance
+                      Id="8c715e9e-ddf9-45a4-8b76-45074d146144"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9487939-2cc5-40c4-9059-369722beeacf">
+                    <propertyInstance
+                      Id="5062b6c6-a1a2-40c2-8f8b-8309e77f9651"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e407bb0b-c6a8-41ed-895e-516530beadbd">
+                    <propertyInstance
+                      Id="abe97dc6-681b-4eb9-940a-52030189cbc1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f75a89b-ae11-49b9-aa92-28b5d796f979">
+                    <propertyInstance
+                      Id="b81af4c5-905b-4b61-ac82-8fbdd7fa08b1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b902847c-0cc0-4f88-8722-1d21211b0b0f">
+                    <propertyInstance
+                      Id="2e04102f-b1c1-472e-88b3-82d12b1a65ec"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="132e1494-3df4-4420-9e5e-387fd3029eee"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="32fa9eb5-595c-4642-a3e5-7c92f03f7ca8"
+                      LastKnownName="Page"
+                      LastKnownLocation="Package3_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8abc5ba6-12c8-49c5-9caa-ec9e7d6a3d95"
+                  name="initData"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b26419f9-6152-4c43-b324-bf0ab686fdd4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DinitData"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="562dab6e-727d-410d-9eb8-8a9481256397"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3d1eddf1-dbef-42df-a3f4-5a68773afec6"
+            name="ResolvePageModel‎&lt;T‎&gt;"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="de03934a-3a4d-4fea-ac91-c73850d6b19f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1d29e871-d892-4185-a89a-1099be2f03ff"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b6acc59-a30c-4436-971a-5a30943c8069">
+                    <propertyInstance
+                      Id="30b8ce32-b5d6-46aa-81ad-e06ad8b9571b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fff1c050-2d92-430e-a7fa-b7597083a40c">
+                    <propertyInstance
+                      Id="ca228357-1313-4704-baa9-99af50749552"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67b08cba-9bc7-4d7b-9309-80164b69ebb0">
+                    <propertyInstance
+                      Id="70f75b3c-b3ca-4913-8f57-2ee10dbbb756"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee38cc2a-5253-4508-9686-7897229dcebe">
+                    <propertyInstance
+                      Id="b13fc13c-c035-4f93-8cf8-f357a7cf06c3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e12d332b-23e5-4215-a813-ab35aed11f12">
+                    <propertyInstance
+                      Id="09c4ae74-115a-467f-906f-8e84d61ff7a9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0174e796-9e85-437a-b7c0-e82a359b337e">
+                    <propertyInstance
+                      Id="cfe4fa49-fc88-41fa-a788-21af68b4238c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3a70caf6-5ac2-418a-908a-ae373ab67266"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="32fa9eb5-595c-4642-a3e5-7c92f03f7ca8"
+                      LastKnownName="Page"
+                      LastKnownLocation="Package3_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="167b2555-37aa-4418-95dd-433c74cd3480"
+                  name="data"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a687dc7e-3422-4c87-ba65-d4e12790ee6f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(ParameterIdentifier%3D0)]) ParameterIdentifier%3Ddata"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="562dab6e-727d-410d-9eb8-8a9481256397"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ecd8a98d-27ee-4f66-ab35-cb5115642eff"
+                  name="pageModel"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="47aa2cdd-c3d9-4d22-98c8-6714122d5a49"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(ParameterIdentifier%3D0)]) ParameterIdentifier%3DpageModel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="05b51a51-2d68-4c8f-ad5d-804eb6003686"
+                      LastKnownName="T"
+                      LastKnownLocation="Package_0951.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="05b51a51-2d68-4c8f-ad5d-804eb6003686"
+        name="T">
+        <referencesInternal>
+          <reference
+            Id="4769bc01-e072-4e72-adc4-25ff815b87f8"
+            handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DFreshMvvm Type%3DFreshPageModelResolver Member%3D(Name%3DResolvePageModel GenericParameterCount%3D1 OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETPortable%2Fv4.5%2FProfile%2FProfile7%2FSystem.Runtime.dll&quot; Namespace%3DSystem Type%3DObject)%2C(ParameterIdentifier%3D0)]) ParameterIdentifier%3D0"
+            tag="ViewCode" />
+        </referencesInternal>
+      </undefinedType>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

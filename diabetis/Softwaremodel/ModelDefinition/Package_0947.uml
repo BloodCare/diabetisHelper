@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1940bbf1-9d65-4191-a6dc-7ac63ecb87c0"
+  name="AlarmList"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="dc2b87ec-692a-4f24-b280-9c20fd705fa0"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMobileFramework.AlarmList"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="a0eb1933-4a49-4799-9a84-f1cdb1a655de"
+        name="AlarmListPageModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="937ab8de-fa6a-46f1-af27-885f5daab070"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FDEU214691%2FDocuments%2FArbeit%2FPP6%2FDevelopment%2FSoftwareengineering%2FMobileApp%2FMobileFramework%2FMobileFramework%2Fbin%2FDebug%2FMobileFramework.dll Namespace%3DMobileFramework.AlarmList Type%3DAlarmListPageModel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8667faae-316a-44d9-ade3-e6263da0f034"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d39bc2bd-ac11-40ee-9117-24706707bdcd">
+                <propertyInstance
+                  Id="ba849911-f18c-48d4-a4bc-fc8a02438e41"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="db1aa672-870c-4acc-b30c-d5f173810610">
+                <propertyInstance
+                  Id="66fa7181-6b2b-4431-8723-a83fab1ae692"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1c1fbee-f358-45f4-a4c3-a2688a77f90c">
+                <propertyInstance
+                  Id="57b25bf9-b899-4a78-9db9-ac25c1624857"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5c14f02f-b378-4fe2-8b5f-b842a1cec909">
+                <propertyInstance
+                  Id="74beb38b-d739-4aaa-bfca-1b80164c2993"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a196734e-99f6-49d1-976d-6c998239ec59">
+                <propertyInstance
+                  Id="8a36f6f1-e60f-4ebc-9c27-1d4b62a72add"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
