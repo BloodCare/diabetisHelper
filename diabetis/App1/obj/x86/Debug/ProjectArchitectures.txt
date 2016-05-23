@@ -1,0 +1,2 @@
+C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\App1\MobileFramework.Win.csproj;x86
+C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\MobileFramework.csproj;neutral

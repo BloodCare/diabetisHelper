@@ -4,49 +4,6 @@
         <name>Xamarin.Insights</name>
     </assembly>
     <members>
-        <member name="M:Xamarin.InsightsCore.IOWriter.ReadRawDiskImage(System.String)">
-            <summary>
-            Reads an image from disk in a portable way - will not decompress compressed images
-            </summary>
-            <param name="fileName"></param>
-        </member>
-        <member name="M:Xamarin.InsightsCore.IOWriter.ReadDiskImage(System.String)">
-            <summary>
-            Reads an image from disk in a portable way - also will decompress images that require decompression
-            </summary>
-            <param name="fileName"></param>
-        </member>
-        <member name="T:Xamarin.InsightsCore.NetworkAvailability">
-            <summary>
-            One big state machine for network availability, with allowances for overrides. 
-            It is expected to have its NetworkState set by platform specific codebases signalling changes in their network state.
-            </summary>
-        </member>
-        <member name="T:Xamarin.InsightsCore.States.FuzzyNetworkState">
-            <summary>
-            Basically every platform has a different idea of network states and trying to represent the specifics of each one is a pita.
-            so lets just be fuzzy and use abstract concepts, trying to match the platform specific concepts to them as best we can 
-            </summary>
-        </member>
-        <member name="M:Xamarin.InsightsCore.WebApi.SubmitException(System.Exception,Xamarin.Insights.Severity,System.String)">
-            <summary>
-                Submits an exception to our api server, this runs through the crash api
-            </summary>
-            <param name="exception"></param>
-            <param name="warningLevel"></param>
-            <param name="Source"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Xamarin.InsightsCore.WebApi.SubmitExceptionAndSave(System.Exception,Xamarin.Insights.Severity,System.String)">
-            <summary>
-                Submits an exception to our api server, this runs through the crash api,
-                in addition this will save the current state of the journal to disk
-                this entire method will block. It is intended to be used when in an unhandled event handler
-            </summary>
-            <param name="exception"></param>
-            <param name="warningLevel"></param>
-            <param name="Source"></param>
-        </member>
         <member name="T:Xamarin.ReportSeverity">
             <summary>
             Obsolete, use Xamarin.Insights.ReportSeverity instead

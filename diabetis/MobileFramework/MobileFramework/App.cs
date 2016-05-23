@@ -1,6 +1,7 @@
 ﻿using FreshMvvm;
 using MobileFramework.Helpers;
 using MobileFramework.MainView;
+using MobileFramework.MonitoringPlugin;
 using MobileFramework.Navigation;
 using MobileFramework.OverviewPlugin;
 using MobileFramework.PluginManager;
@@ -26,6 +27,7 @@ namespace MobileFramework
             //every Plugin has to be added like these
             masterDetailNav.AddPage<MainPageModel>(PluginNames.MainPluginName, null);
             masterDetailNav.AddPage<OverviewPluginPageModel>(PluginNames.OverviewPluginName, null);
+            masterDetailNav.AddPage<MonitoringPluginPageModel>(PluginNames.MonitoringPluginName, null);
 
             //initialises the navigation Page
             masterDetailNav.CreateMenuPage<NavigationPageModel>(null);
