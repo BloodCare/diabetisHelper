@@ -4,7 +4,7 @@
 <dict>
 	<key>UIDeviceFamily</key>
 	<array>
-		<integer>2</integer>
+		<integer>1</integer>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -12,18 +12,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.1</string>
+	<string>9.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>MobileFramework</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Plewka.msmApp</string>
+	<string>com.MobileFramework.MobileFramework</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
@@ -35,16 +29,14 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
 	<string></string>
-	<key>UIMainStoryboardFile~ipad</key>
-	<string>LaunchScreen</string>
-  <key>UIApplicationExitsOnSuspend</key>
-  <false/>
+	<key>UIApplicationExitsOnSuspend</key>
+	<false/>
 	<key>UIBackgroundModes</key>
 	<array>
-    <string>fetch</string>
+		<string>fetch</string>
 		<string>location</string>
-    <string>rermote-notification</string>
-    <string>external-accessory</string>
+		<string>rermote-notification</string>
+		<string>external-accessory</string>
 	</array>
 </dict>
 </plist>

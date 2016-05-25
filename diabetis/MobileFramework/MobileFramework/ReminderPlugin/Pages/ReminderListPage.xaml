@@ -1,23 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileFramework.ReminderPlugin.ReminderListPage">
 	<ContentPage.Content>
+	<StackLayout Orientation="Vertical">
 		<ListView ItemsSource="{Binding ReminderList}" SelectedItem="{Binding SelectedReminder}">
-			    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <ViewCell.View>
-<!--            <StackLayout Orientation="Horizontal">-->
-<!--              <Image Source="{Binding ImageUri}" WidthRequest="40" HeightRequest="40" />-->
-              <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                <Label VerticalOptions="Center" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
-                <Switch IsToggled="{Binding isActive}" HorizontalOptions="End" />
-              </StackLayout>
-<!--            </StackLayout>-->
-          </ViewCell.View>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+								<Label VerticalOptions="Center" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
+								<Switch IsToggled="{Binding isActive}" HorizontalOptions="End" />
+							</StackLayout>
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
 		</ListView>
+		<StackLayout Orientation="Horizontal">
+		<Button x:Name="btnAddReminder" Command="{Binding AddReminder}" Text="Add Reminder" />
+		<Button Text="Add Appointment To Calander" />
+		<Button Text="Add Emergency Reminder" />		
+		</StackLayout>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

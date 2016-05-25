@@ -5,13 +5,12 @@ using Xamarin.Forms;
 
 namespace MobileFramework.ReminderPlugin
 {
-	public partial class ReminderListPage : ContentPage
+	public partial class ReminderAddPage : ContentPage
 	{
-		public ReminderListPage ()
+		public ReminderAddPage ()
 		{
 			InitializeComponent ();
 		}
-
 	}
 }
 

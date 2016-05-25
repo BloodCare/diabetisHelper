@@ -97,6 +97,10 @@
     </Compile>
     <Compile Include="ReminderPlugin\PageModels\ReminderListPageModel.cs" />
     <Compile Include="ReminderPlugin\PageModels\ReminderPageModel.cs" />
+    <Compile Include="ReminderPlugin\PageModels\ReminderAddPageModel.cs" />
+    <Compile Include="ReminderPlugin\Pages\ReminderAddPage.xaml.cs">
+      <DependentUpon>ReminderAddPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -116,6 +120,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="ReminderPlugin\Pages\ReminderPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReminderPlugin\Pages\ReminderAddPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

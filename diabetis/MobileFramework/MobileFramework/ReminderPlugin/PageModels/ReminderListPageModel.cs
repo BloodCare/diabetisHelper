@@ -30,6 +30,17 @@ namespace MobileFramework.ReminderPlugin
 				RaisePropertyChanged ();
 			}
 		}
+		public Command AddReminder
+		{
+			get
+			{
+				//test notification
+				return new Command( (value) =>
+					{
+						CoreMethods.PushPageModel<ReminderAddPageModel> (value);
+					});
+			}
+		}
 
 	}
 
