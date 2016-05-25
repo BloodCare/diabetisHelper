@@ -29,7 +29,7 @@ namespace MobileFramework
             masterDetailNav.AddPage<MainPageModel>(PluginNames.MainPluginName, null);
             masterDetailNav.AddPage<OverviewPluginPageModel>(PluginNames.OverviewPluginName, null);
             masterDetailNav.AddPage<MonitoringPluginPageModel>(PluginNames.MonitoringPluginName, null);
-			masterDetailNav.AddPage<ReminderPluginPageModel>(PluginNames.ReminderPluginName, null);
+			masterDetailNav.AddPage<ReminderListPageModel>(PluginNames.ReminderPluginName, null);
 
 
             //initialises the navigation Page

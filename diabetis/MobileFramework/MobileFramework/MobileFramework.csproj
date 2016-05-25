@@ -86,6 +86,17 @@
     </Compile>
     <Compile Include="ReminderPlugin\ReminderPluginPageModel.cs" />
     <Compile Include="ReminderPlugin\ReminderPluginSettingsModel.cs" />
+    <Compile Include="ReminderPlugin\Model\Reminder.cs" />
+    <Compile Include="ReminderPlugin\Services\IReminderDataService.cs" />
+    <Compile Include="ReminderPlugin\Services\ReminderDataService.cs" />
+    <Compile Include="ReminderPlugin\Pages\ReminderListPage.xaml.cs">
+      <DependentUpon>ReminderListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderPlugin\Pages\ReminderPage.xaml.cs">
+      <DependentUpon>ReminderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReminderPlugin\PageModels\ReminderListPageModel.cs" />
+    <Compile Include="ReminderPlugin\PageModels\ReminderPageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -99,6 +110,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ReminderPlugin\ReminderPluginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReminderPlugin\Pages\ReminderListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReminderPlugin\Pages\ReminderPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -124,11 +141,12 @@
     <Folder Include="Helpers\LanguageFiles\" />
     <Folder Include="OverviewPlugin\ViewElements\" />
     <Folder Include="ReminderPlugin\" />
+    <Folder Include="ReminderPlugin\Services\" />
+    <Folder Include="ReminderPlugin\Model\" />
+    <Folder Include="ReminderPlugin\PageModels\" />
+    <Folder Include="ReminderPlugin\Pages\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FreshIOC">
-      <HintPath>..\..\packages\FreshIoC\FreshIOC.dll</HintPath>
-    </Reference>
     <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
     </Reference>
@@ -150,6 +168,15 @@
     <Reference Include="Xamarin.Insights, Version=1.12.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\Xamarin.Insights.1.12.3\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll</HintPath>
     </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\..\packages\PropertyChanged.Fody.1.51.0\Lib\portable-net4+sl4+wp8+win8+wpa81+MonoAndroid16+MonoTouch40\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="FreshIOC">
+      <HintPath>..\..\packages\FreshMvvm.2.1.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshIOC.dll</HintPath>
+    </Reference>
+    <Reference Include="FreshMvvm">
+      <HintPath>..\..\packages\FreshMvvm.2.1.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshMvvm.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MonitoringPlugin\MonitoringPluginPage.xaml">
@@ -169,6 +196,7 @@
   <Import Project="..\..\packages\Xamarin.Forms.2.2.0.31\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.2.0.31\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Import Project="..\..\packages\Xamarin.Insights.1.12.3\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" Condition="Exists('..\..\packages\Xamarin.Insights.1.12.3\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" />
+  <Import Project="..\..\packages\Fody.1.29.2\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\..\packages\Fody.1.29.2\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

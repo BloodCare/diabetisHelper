@@ -6,9 +6,6 @@
              BackgroundColor="White">
   <ScrollView x:Name="layout"  Orientation = "Vertical" VerticalOptions="StartAndExpand" BackgroundColor="White">
     <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-      <StackLayout x:Name="msmLayout" VerticalOptions="Fill"/>
-      <Label Text="{Binding Name}"  TextColor="Black"/>
-      <Button Text="doSth" Command="{Binding DoSthCommand}" />
     </StackLayout>
   </ScrollView>
 </ContentPage>

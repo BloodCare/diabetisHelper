@@ -16,6 +16,7 @@ namespace MobileFramework.ReminderPlugin
     /// </summary>
 	public class ReminderPluginPageModel : FreshBasePageModel, INotifyPropertyChanged
     {
+		
         private string name;
         private string test;
         public event PropertyChangedEventHandler PropertyChanged;
@@ -36,8 +37,6 @@ namespace MobileFramework.ReminderPlugin
 		public ReminderPluginPageModel()
         {
 			Name = PluginNames.ReminderPluginName;
-            
-            
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
