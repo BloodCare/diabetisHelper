@@ -14,6 +14,7 @@ using Android.Content;
 using MobileFramework.Droid.Services;
 using MobileFramework.Helpers.Messages;
 using MobileFramework.Model;
+using Syncfusion.SfChart.XForms.Droid;
 
 namespace MobileFramework.Droid
 {
@@ -31,6 +32,7 @@ namespace MobileFramework.Droid
         {
             base.OnCreate(bundle);
             Forms.Init(this, bundle);
+            new SfChartRenderer();
             WireUpLongRunningTask();
             var x = this.Intent.GetStringExtra("PluginName");
             LoadApplication(new App(x));

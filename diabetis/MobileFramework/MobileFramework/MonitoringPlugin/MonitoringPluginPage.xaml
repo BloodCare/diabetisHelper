@@ -1,14 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="MobileFramework.MonitoringPlugin.MonitoringPluginPage"
+             
              Padding="10"
              BackgroundColor="White">
-  <ScrollView x:Name="layout"  Orientation = "Vertical" VerticalOptions="StartAndExpand" BackgroundColor="White">
-    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-      <StackLayout x:Name="msmLayout" VerticalOptions="Fill"/>
-      <Label Text="{Binding Name}"  TextColor="Black"/>
-      <Button Text="doSth" Command="{Binding DoSthCommand}" />
-    </StackLayout>
-  </ScrollView>
+
+  <Grid x:Name="grid">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+      
+    
+    
+
+    <!--<chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0">-->
+    
+      <!--<chart:SfChart.PrimaryAxis>
+        <chart:DateTimeAxis IntervalType="Days">
+          <chart:DateTimeAxis.Title>
+            <chart:ChartAxisTitle Text="Week"/>
+          </chart:DateTimeAxis.Title>
+       <chart:DateTimeAxis.Interval>
+         <x:Double>10</x:Double>
+      		</chart:DateTimeAxis.Interval>
+        </chart:DateTimeAxis>
+      </chart:SfChart.PrimaryAxis>
+
+      <chart:SfChart.SecondaryAxis>
+        <chart:NumericalAxis>
+          <chart:NumericalAxis.Title>
+            <chart:ChartAxisTitle Text ="Blood Sugar"/>
+          </chart:NumericalAxis.Title>
+        </chart:NumericalAxis>
+      </chart:SfChart.SecondaryAxis>
+
+      <chart:LineSeries ItemsSource="{Binding DataPoints}" XBindingPath="Date.Day" YBindingPath="BloodSugarValue">
+      </chart:LineSeries>
+      
+    </chart:SfChart>-->
+
+    
+  </Grid>
+
 </ContentPage>

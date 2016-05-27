@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Syncfusion.SfChart.XForms.UWP;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace App1
         public MainPage()
         {
             this.InitializeComponent();
+            new SfChartRenderer();
             LoadApplication(new MobileFramework.App(""));
             
         }

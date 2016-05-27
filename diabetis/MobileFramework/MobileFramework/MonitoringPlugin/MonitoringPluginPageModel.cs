@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using FreshMvvm;
+using MobileFramework.MonitoringPlugin.Helpers;
+using System.Globalization;
+using System.Collections.ObjectModel;
+using Syncfusion.SfChart.XForms;
 
 namespace MobileFramework.MonitoringPlugin
 {
@@ -36,8 +40,12 @@ namespace MobileFramework.MonitoringPlugin
         public MonitoringPluginPageModel()
         {
             Name = PluginNames.MonitoringPluginName;
-            
-            
+
+            DataPoints = new ObservableCollection<ChartDataPoint>();
+            DataPoints.Add(new ChartDataPoint ( DateTime.Now , 80 ));
+            DataPoints.Add(new ChartDataPoint ( new DateTime(2016, 5, 23), 75));
+
+
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
@@ -64,6 +72,13 @@ namespace MobileFramework.MonitoringPlugin
                 OnPropertyChanged("Name");
             }
         }
+
+        public ObservableCollection<ChartDataPoint> DataPoints
+        {
+            get;
+            set;
+            }
+
 
         public Command DoSthCommand
         {

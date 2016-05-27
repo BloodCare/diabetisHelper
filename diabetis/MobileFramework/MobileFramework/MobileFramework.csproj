@@ -42,6 +42,7 @@
     <Compile Include="Helpers\Messages\CancelledMessage.cs" />
     <Compile Include="Helpers\Messages\FunctionPassingToNativeBackground.cs" />
     <Compile Include="Helpers\Messages\StartLongRunningTaskMessage.cs" />
+    <Compile Include="MonitoringPlugin\Helpers\DataPoint.cs" />
     <Compile Include="MonitoringPlugin\MonitoringPluginPage.xaml.cs">
       <DependentUpon>MonitoringPluginPage.xaml</DependentUpon>
     </Compile>
