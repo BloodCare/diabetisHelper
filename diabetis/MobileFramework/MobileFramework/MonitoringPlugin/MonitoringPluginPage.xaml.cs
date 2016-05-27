@@ -58,11 +58,11 @@ namespace MobileFramework.MonitoringPlugin
             data.Add(new ChartDataPoint(new DateTime(2016, 5, 28, 8, 33, 0), 42));
             data.Add(new ChartDataPoint(new DateTime(2016, 5, 29, 8, 33, 0), 74));
 
-            DateTimeAxis dateAxis = new CategoryAxis() {LabelPlacement = LabelPlacement.BetweenTicks,IntervalType = DateTimeIntervalType.Days, Interval = 1};
+            DateTimeAxis dateAxis = new DateTimeAxis() {IntervalType = DateTimeIntervalType.Days, Interval = 1};
             //dateAxis.Minimum = 1;
             //dateAxis.Maximum = 7;
             ChartAxisLabelStyle style = new ChartAxisLabelStyle();
-            style.LabelFormat  = LabelPlacement.BetweenTicks;
+           // style.LabelFormat  = LabelPlacement.BetweenTicks;
             dateAxis.LabelStyle = style;
             chart.PrimaryAxis.LabelStyle = style;
             chart.PrimaryAxis = dateAxis;

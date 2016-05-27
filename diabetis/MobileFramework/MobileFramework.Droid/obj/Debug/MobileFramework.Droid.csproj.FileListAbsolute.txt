@@ -75,5 +75,7 @@ C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramew
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\res\drawable\msm.jpg
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\R.cs.flag
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\uploadflags.txt
+C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FreshMvvm.dll
+C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FreshMvvm.dll.mdb
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\MobileFramework.Droid.dll.mdb
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.Droid.dll.mdb
