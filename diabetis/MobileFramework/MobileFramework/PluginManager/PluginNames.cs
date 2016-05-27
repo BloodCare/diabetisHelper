@@ -15,6 +15,8 @@ namespace MobileFramework.PluginManager
         public const String OverviewPluginName = "System Overview";
         public const String MainPluginName = "Dashboard";
         public const String MonitoringPluginName = "Monitoring";
+		public const String ReminderPluginName = "Reminder";
+
 
 
         //public static String YourPluginName = "YourName";

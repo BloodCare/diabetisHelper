@@ -6,6 +6,7 @@ using MobileFramework.Navigation;
 using MobileFramework.OverviewPlugin;
 using MobileFramework.PluginManager;
 using Xamarin.Forms;
+using MobileFramework.ReminderPlugin;
 
 namespace MobileFramework
 {
@@ -28,6 +29,8 @@ namespace MobileFramework
             masterDetailNav.AddPage<MainPageModel>(PluginNames.MainPluginName, null);
             masterDetailNav.AddPage<OverviewPluginPageModel>(PluginNames.OverviewPluginName, null);
             masterDetailNav.AddPage<MonitoringPluginPageModel>(PluginNames.MonitoringPluginName, null);
+			masterDetailNav.AddPage<ReminderListPageModel>(PluginNames.ReminderPluginName, null);
+
 
             //initialises the navigation Page
             masterDetailNav.CreateMenuPage<NavigationPageModel>(null);
