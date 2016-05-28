@@ -17,16 +17,19 @@
     
     
 
-    <!--<chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0">-->
+    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0">
     
-      <!--<chart:SfChart.PrimaryAxis>
-        <chart:DateTimeAxis IntervalType="Days">
+      <chart:SfChart.PrimaryAxis >
+        
+        <chart:DateTimeAxis IntervalType="Days" LabelCreated="PrimaryAxis_LabelCreated">
           <chart:DateTimeAxis.Title>
             <chart:ChartAxisTitle Text="Week"/>
           </chart:DateTimeAxis.Title>
-       <chart:DateTimeAxis.Interval>
-         <x:Double>10</x:Double>
+          <chart:DateTimeAxis.Interval>
+            <x:Double>1</x:Double>
       		</chart:DateTimeAxis.Interval>
+          
+          
         </chart:DateTimeAxis>
       </chart:SfChart.PrimaryAxis>
 
@@ -38,10 +41,10 @@
         </chart:NumericalAxis>
       </chart:SfChart.SecondaryAxis>
 
-      <chart:LineSeries ItemsSource="{Binding DataPoints}" XBindingPath="Date.Day" YBindingPath="BloodSugarValue">
+      <chart:LineSeries ItemsSource="{Binding DataPoints}" >
       </chart:LineSeries>
       
-    </chart:SfChart>-->
+    </chart:SfChart>
 
     
   </Grid>

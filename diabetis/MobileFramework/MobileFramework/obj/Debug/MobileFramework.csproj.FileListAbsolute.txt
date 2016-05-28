@@ -63,5 +63,3 @@ C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramew
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.dll
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.xml
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.csprojResolveAssemblyReference.cache
-C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
-C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
