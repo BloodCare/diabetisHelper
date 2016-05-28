@@ -79,3 +79,47 @@ C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramew
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FreshMvvm.dll.mdb
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\MobileFramework.Droid.dll.mdb
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.Droid.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.Droid.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.Droid.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFmework.MobileFmework.apk
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFmework.MobileFmework-Signed.apk
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FormsViewGroup.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FreshIOC.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FreshMvvm.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Syncfusion.SfChart.Android.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Syncfusion.SfChart.XForms.Android.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Syncfusion.SfChart.XForms.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\System.Net.Http.Extensions.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\System.Net.Http.Primitives.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Android.Support.Design.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Forms.Core.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Forms.Platform.Android.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Forms.Platform.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\ModernHttpClient.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\System.Net.Http.Extensions.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\System.Net.Http.Primitives.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Forms.Core.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\FreshMvvm.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\MobileFramework.Droid.csprojResolveAssemblyReference.cache
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\MobileFramework.Droid.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\MobileFramework.Droid.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\android\bin\MobileFmework.MobileFmework.apk
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\res\drawable\icon.png
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\res\drawable-hdpi\icon.png
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\res\drawable-xhdpi\icon.png
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\res\drawable-xxhdpi\icon.png
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\res\drawable\msm.jpg
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\R.cs.flag
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\uploadflags.txt
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\obj\Debug\MobileFramework.Droid.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework.Droid\bin\Debug\MobileFramework.Droid.dll.mdb
