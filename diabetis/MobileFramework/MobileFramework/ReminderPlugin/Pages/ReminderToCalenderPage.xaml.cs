@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace MobileFramework.ReminderPlugin
 {
-	public partial class ReminderAddPage : ContentPage
+	public partial class ReminderToCalenderPage : ContentPage
 	{
 		public static String feature1 = "Monitoring";
 		public static String feature2 = "Diet Planner";
@@ -29,7 +29,7 @@ namespace MobileFramework.ReminderPlugin
 			{ "By the Sea side", s4 }, { "Chimes", s5 },
 		};
 
-		public ReminderAddPage ()
+		public ReminderToCalenderPage ()
 		{
 			InitializeComponent ();
 			Padding = new Thickness (20);
