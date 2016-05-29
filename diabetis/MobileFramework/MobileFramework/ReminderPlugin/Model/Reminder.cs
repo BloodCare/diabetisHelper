@@ -21,6 +21,15 @@ namespace MobileFramework.ReminderPlugin
 			get;
 			set;
 		}
+		public string LinkToFeature{
+			get;
+			set;
+		}
+		public DateTime OnDate {
+			get;
+			set;
+		}
+
 
 	}
 }
