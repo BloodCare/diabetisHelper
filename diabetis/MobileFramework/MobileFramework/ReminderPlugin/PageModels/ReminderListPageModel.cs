@@ -42,6 +42,18 @@ namespace MobileFramework.ReminderPlugin
 			}
 		}
 
+		public Command AddReminderToCalender
+		{
+			get
+			{
+				//test notification
+				return new Command( (value) =>
+					{
+						CoreMethods.PushPageModel<ReminderToCalenderPageModel> (value);
+					});
+			}
+		}
+
 	}
 
 }

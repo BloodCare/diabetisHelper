@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace MobileFramework.ReminderPlugin
@@ -38,6 +37,7 @@ namespace MobileFramework.ReminderPlugin
 			var name = new Entry{ 
 				Placeholder="Name"
 			};
+
 
 			var description = new Entry{
 				Placeholder = "Description",
