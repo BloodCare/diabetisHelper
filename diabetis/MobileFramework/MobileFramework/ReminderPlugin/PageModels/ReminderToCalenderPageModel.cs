@@ -20,7 +20,8 @@ namespace MobileFramework.ReminderPlugin
 				//test notification
 				return new Command( (value) =>
 					{
-						CoreMethods.PushPageModel<ReminderListPageModel> (value);
+						
+						CoreMethods.PopToRoot(true);
 					});
 			}
 		}
@@ -32,7 +33,8 @@ namespace MobileFramework.ReminderPlugin
 				//test notification
 				return new Command( (value) =>
 					{
-						CoreMethods.PushPageModel<ReminderListPageModel> (value);
+						
+						CoreMethods.PopToRoot(true);
 					});
 			}
 		}
