@@ -11,21 +11,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MobileFramework.MonitoringPlugin
+namespace MobileFramework.MonitoringPlugin.SubPages
 {
     /// <summary>
     /// the entry point of the alarmplugin, which will be called from navigation in master detail view
     /// </summary>
-    public partial class MonitoringPluginPage : ContentPage
+    public partial class AddBloodSugarPage : ContentPage
     {
-        private MonitoringPluginPageModel model;
-        private readonly ObservableCollection<ChartDataPoint> data = new ObservableCollection<ChartDataPoint>();
-
-        private SfChart chart;
-        LineSeries lineSeries;
-        public MonitoringPluginPage()
+        private AddBloodSugarPageModel model;
+        public AddBloodSugarPage()
         {
-            
+            this.BindingContext = new AddBloodSugarPageModel();
             InitializeComponent();
             //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
 
@@ -42,19 +38,11 @@ namespace MobileFramework.MonitoringPlugin
         /// </summary>
         protected  override void OnAppearing()
         {
-            model = (MonitoringPluginPageModel)this.BindingContext;
-            addDatapoints_Button.Command = AddDatapoints;
-            
+            model = (AddBloodSugarPageModel)this.BindingContext;
+            timePicker.Time = DateTime.Now.TimeOfDay;
         }
 
 
-        void PrimaryAxis_LabelCreated(object sender, ChartAxisLabelEventArgs e)
-        {
-            DateTime date = DateTime.Parse(e.LabelContent);
-
-            e.LabelContent = date.DayOfWeek.ToString().Substring(0, 2) + " \n" + date.ToString("dd MMM");
-            
-        }
         
         /// <summary>
         /// unsubscibes the property changed event when view is closed
@@ -71,19 +59,12 @@ namespace MobileFramework.MonitoringPlugin
                 return new Command(async () =>
                 {
                 var action = await DisplayActionSheet("Add:", "Cancel", null, DataPoints.BloodSugar.ToString(), DataPoints.Meal.ToString(), DataPoints.Medicine.ToString());
+                switch(action)
+                {
+                        //case DataPoints.BloodSugar.ToString():
 
-                    if (action == DataPoints.BloodSugar.ToString())
-                    {
-                        model.AddDatapoints(DataPoints.BloodSugar);
-                    }
-                    else if (action == DataPoints.Meal.ToString())
-                    {
-                        model.AddDatapoints(DataPoints.Meal);
-                    }
-                    else if (action == DataPoints.Medicine.ToString())
-                    {
-                        model.AddDatapoints(DataPoints.Medicine);
-                    }
+                            //break;
+                }
 
                 });
             }

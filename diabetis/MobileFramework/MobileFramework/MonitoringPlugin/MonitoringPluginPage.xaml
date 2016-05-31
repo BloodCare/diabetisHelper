@@ -41,10 +41,23 @@
         </chart:NumericalAxis>
       </chart:SfChart.SecondaryAxis>
 
-      <chart:LineSeries ItemsSource="{Binding DataPoints}" >
+      <chart:LineSeries ItemsSource="{Binding BloodSugarDataPoints}" >
+        <chart:LineSeries.DataMarker>
+
+          <chart:ChartDataMarker/>
+
+        </chart:LineSeries.DataMarker>
       </chart:LineSeries>
+
+      <chart:ScatterSeries ItemsSource="{Binding MealDataPoints}" StrokeColor="Green" Color="Green" ScatterHeight="10" ScatterWidth="10" >
+        
+      </chart:ScatterSeries>
       
     </chart:SfChart>
+
+    <Button x:Name="addDatapoints_Button" Text="Add" Grid.Row="1"  HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" WidthRequest="50">
+      
+    </Button>
 
     
   </Grid>

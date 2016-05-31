@@ -12,6 +12,8 @@ using MobileFramework.MonitoringPlugin.Helpers;
 using System.Globalization;
 using System.Collections.ObjectModel;
 using Syncfusion.SfChart.XForms;
+using MobileFramework.MonitoringPlugin.SubPages;
+using MobileFramework.Helpers;
 
 namespace MobileFramework.MonitoringPlugin
 {
@@ -41,24 +43,42 @@ namespace MobileFramework.MonitoringPlugin
         {
             Name = PluginNames.MonitoringPluginName;
 
-            DataPoints = new ObservableCollection<ChartDataPoint>();
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 8, 33, 0), 56));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 12, 45, 0), 80));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 18, 15, 0), 76));
+            BloodSugarDataPoints = new ObservableCollection<ChartDataPoint>();
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 8, 33, 0), 56));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 12, 45, 0), 80));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 18, 15, 0), 76));
             
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 8, 0, 0), 90));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 11, 37, 0), 66));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 16, 9, 0), 60));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 8, 0, 0), 90));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 11, 37, 0), 66));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 16, 9, 0), 60));
             
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 6, 30, 0), 40));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 13, 0, 0), 70));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 22, 20, 0), 88));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 6, 30, 0), 40));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 13, 0, 0), 70));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 22, 20, 0), 88));
            
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 26, 8, 33, 0), 45));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 27, 8, 33, 0), 97));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 28, 8, 33, 0), 42));
-            DataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 29, 8, 33, 0), 74));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 26, 8, 33, 0), 45));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 27, 8, 33, 0), 97));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 28, 8, 33, 0), 42));
+            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 29, 8, 33, 0), 74));
 
+
+            MealDataPoints = new ObservableCollection<ChartDataPoint>();
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 8, 33, 0), 56 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 12, 45, 0), 80 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 18, 15, 0), 76 + 10));
+            
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 8, 0, 0), 90 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 11, 37, 0), 66 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 16, 9, 0), 60 + 10));
+            
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 6, 30, 0), 40 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 13, 0, 0), 70 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 22, 20, 0), 88 + 10));
+            
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 26, 8, 33, 0), 45 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 27, 8, 33, 0), 97 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 28, 8, 33, 0), 42 + 10));
+            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 29, 8, 33, 0), 74 + 10));
 
         }
 
@@ -87,22 +107,40 @@ namespace MobileFramework.MonitoringPlugin
             }
         }
 
-        public ObservableCollection<ChartDataPoint> DataPoints
+        public ObservableCollection<ChartDataPoint> BloodSugarDataPoints
         {
             get;
             set;
             }
 
-
-        public Command DoSthCommand
+        public ObservableCollection<ChartDataPoint> MealDataPoints
         {
-            get
+            get;
+            set;
+        }
+        public ObservableCollection<ChartDataPoint> MedDataPoints
+        {
+            get;
+            set;
+        }
+
+        public async void AddDatapoints(DataPoints point)
+        {
+           switch(point)
             {
-                //test notification
-                return new Command( () =>
-                {
-                   
-                });
+                case DataPoints.BloodSugar:
+                    FreshMasterDetailNavigation nav=  App.GetNavigationContainer();
+                    await nav.PushPage(new AddBloodSugarPage(), null, false, true);
+                    //CoreMethods.PushPageModel<AddBloodSugarPageModel>(null, true);
+                    break;
+
+                case DataPoints.Meal:
+
+                    break;
+
+                case DataPoints.Medicine:
+
+                    break;
             }
         }
 
