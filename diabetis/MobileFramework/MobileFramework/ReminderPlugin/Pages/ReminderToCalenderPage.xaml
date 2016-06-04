@@ -1,4 +1,51 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileFramework.ReminderPlugin.ReminderToCalenderPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="MobileFramework.ReminderPlugin.ReminderToCalenderPage"
+xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
+Padding="20">
+<StackLayout>                
+
+ <Entry Placeholder="Name" Text="{Binding Name,Mode=TwoWay}">
+  <Entry.Behaviors>
+   <local:MaxLengthValidator MaxLength="25" />
+  </Entry.Behaviors>
+  </Entry> 
+
+  <Entry Placeholder="Description(Max 50 characters)" Text="{Binding Description,Mode=TwoWay}" WidthRequest="200" HeightRequest="100">
+   <Entry.Behaviors>
+   <local:MaxLengthValidator MaxLength="50" />
+  </Entry.Behaviors>
+  </Entry> 
+
+  <Picker x:Name="FeaturePicker1" SelectedIndex="{Binding SelectIndex}" HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+             <x:String>link to feature</x:String> 
+            <x:String>Monitoring</x:String> 
+            <x:String>Diet Planner</x:String>
+        </Picker.Items>
+        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+    </Picker> 
+
+    <Picker x:Name="SoundPicker1" HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+         <x:String>Sound</x:String>
+            <x:String>Jazz</x:String> 
+            <x:String>Buletin</x:String>
+        </Picker.Items>
+        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+    </Picker>
+
+    <DatePicker  Date ="{Binding Date}" Format="D">
+     <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+    </DatePicker>
+    <TimePicker Time ="{Binding Time}" Format="T" />
+
+  <StackLayout Orientation="Horizontal">
+  <Button x:Name="btnSaveReminder" Command="{Binding saveCalReminder}" Text="Save" TextColor="White" BackgroundColor="Green" WidthRequest="100" />
+  <Button x:Name="btnCancelReminder" Command="{Binding cancelCalReminder}" Text="Cancel" TextColor="White" BackgroundColor="Gray" WidthRequest="100" />
+
+  </StackLayout>
+  </StackLayout>
 	
 </ContentPage>
