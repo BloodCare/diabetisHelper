@@ -1,4 +1,5 @@
-﻿using MobileFramework.Navigation;
+﻿using MobileFramework.MonitoringPlugin.Helpers;
+using MobileFramework.Navigation;
 using MobileFramework.PluginManager;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace MobileFramework.MonitoringPlugin
     /// her the NavigationSideBarItem and the global Plugin Widget should be stored (all stuff that should be usable in other Plugins)
     /// SettingsModels should be singletons, that there is always consistence for the Settings
     /// </summary>
-    class MonitoringPluginSettingsModel : SettingsModel
+    public class MonitoringPluginSettingsModel : SettingsModel
     {
         /// <summary>
         /// constructor of the SettingsModel
@@ -23,9 +24,15 @@ namespace MobileFramework.MonitoringPlugin
         public MonitoringPluginSettingsModel()
         {
             Name = PluginNames.MonitoringPluginName;
-            SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source= ImageSource.FromFile("msm.jpg" )}};
+            SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source = ImageSource.FromFile("msm.jpg") } };
+            BloodSugarDataPoints = new List<BloodSugarDataPoint>();
+            MealDataPoints = new List<MealDataPoint>();
         }
 
         public WidgetView AlarmWidget { get; set; }
+
+        public List<BloodSugarDataPoint> BloodSugarDataPoints {get;set;}
+
+        public List<MealDataPoint> MealDataPoints { get; set; }
     }
 }

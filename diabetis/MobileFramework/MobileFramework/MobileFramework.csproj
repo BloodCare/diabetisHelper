@@ -42,16 +42,21 @@
     <Compile Include="Helpers\Messages\CancelledMessage.cs" />
     <Compile Include="Helpers\Messages\FunctionPassingToNativeBackground.cs" />
     <Compile Include="Helpers\Messages\StartLongRunningTaskMessage.cs" />
-    <Compile Include="MonitoringPlugin\Helpers\DataPoint.cs" />
+    <Compile Include="Model\Ingredient.cs" />
+    <Compile Include="MonitoringPlugin\Helpers\DataPoints.cs" />
     <Compile Include="MonitoringPlugin\Helpers\enums.cs" />
     <Compile Include="MonitoringPlugin\MonitoringPluginPage.xaml.cs">
       <DependentUpon>MonitoringPluginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MonitoringPlugin\MonitoringPluginPageModel.cs" />
     <Compile Include="MonitoringPlugin\MonitoringPluginSettingsModel.cs" />
+    <Compile Include="MonitoringPlugin\SubPages\AddMealPage.xaml.cs">
+      <DependentUpon>AddMealPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MonitoringPlugin\SubPages\AddBloodSugarPage.xaml.cs">
       <DependentUpon>AddBloodSugarPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MonitoringPlugin\SubPages\AddMealPageModel.cs" />
     <Compile Include="MonitoringPlugin\SubPages\AddBloodSugarPageModel.cs" />
     <Compile Include="OverviewPlugin\OverviewPluginPage.xaml.cs">
       <DependentUpon>OverviewPluginPage.xaml</DependentUpon>
@@ -198,6 +203,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MonitoringPlugin\SubPages\AddBloodSugarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MonitoringPlugin\SubPages\AddMealPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

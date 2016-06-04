@@ -10,18 +10,18 @@
 
   <Label Text="{Binding Name}"></Label>
   <StackLayout HorizontalOptions="CenterAndExpand">
-    <DatePicker  Date="{x:Static sys:DateTime.Now}">
+    <DatePicker  Date="{Binding Date}">
       <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
     </DatePicker>
-    <TimePicker x:Name="timePicker" >
+    <TimePicker x:Name="timePicker" Time="{Binding Time}" >
     </TimePicker>
     <StackLayout Orientation="Horizontal">
       <Label Text="BloodSugar Value:"></Label>
-      <Entry Keyboard="Numeric"></Entry>
+      <Entry Keyboard="Numeric" Text="{Binding BloodSugarValue}"></Entry>
     </StackLayout>
     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
       <Button Text="Cancel" ></Button>
-      <Button Text ="Save"></Button>
+      <Button Text ="Save" Command="{Binding AddDataPoint}"></Button>
       
     </StackLayout>
   </StackLayout>

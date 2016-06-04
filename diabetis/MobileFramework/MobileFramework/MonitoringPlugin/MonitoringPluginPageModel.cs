@@ -24,7 +24,9 @@ namespace MobileFramework.MonitoringPlugin
     {
         private string name;
         private string test;
+        IPluginCollector pluginCollector;
         public event PropertyChangedEventHandler PropertyChanged;
+        MonitoringPluginSettingsModel settingsModel;
         public virtual void OnPropertyChanged(string propertyName)
         {
             var propertyChanged = PropertyChanged;
@@ -39,27 +41,12 @@ namespace MobileFramework.MonitoringPlugin
         /// sets up eventhandler for structure refreshed event
         /// </summary>
         /// <param name="model"></param>
-        public MonitoringPluginPageModel()
+        public MonitoringPluginPageModel(IPluginCollector _pluginCollector)
         {
             Name = PluginNames.MonitoringPluginName;
-
+            pluginCollector = _pluginCollector;
             BloodSugarDataPoints = new ObservableCollection<ChartDataPoint>();
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 8, 33, 0), 56));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 12, 45, 0), 80));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 18, 15, 0), 76));
-            
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 8, 0, 0), 90));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 11, 37, 0), 66));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 16, 9, 0), 60));
-            
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 6, 30, 0), 40));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 13, 0, 0), 70));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 22, 20, 0), 88));
-           
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 26, 8, 33, 0), 45));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 27, 8, 33, 0), 97));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 28, 8, 33, 0), 42));
-            BloodSugarDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 29, 8, 33, 0), 74));
+           settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
 
 
             MealDataPoints = new ObservableCollection<ChartDataPoint>();
@@ -90,7 +77,11 @@ namespace MobileFramework.MonitoringPlugin
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-          
+            BloodSugarDataPoints.Clear();
+          foreach(BloodSugarDataPoint tmpPoint in settingsModel.BloodSugarDataPoints)
+            {
+                BloodSugarDataPoints.Add(new ChartDataPoint(tmpPoint.Date, tmpPoint.BloodSugarLevel));
+            }
         }
 
      
@@ -126,16 +117,17 @@ namespace MobileFramework.MonitoringPlugin
 
         public async void AddDatapoints(DataPoints point)
         {
-           switch(point)
+            FreshMasterDetailNavigation nav = App.GetNavigationContainer();
+            switch (point)
             {
                 case DataPoints.BloodSugar:
-                    FreshMasterDetailNavigation nav=  App.GetNavigationContainer();
-                    await nav.PushPage(new AddBloodSugarPage(), null, false, true);
+                    
+                    await nav.PushPage(new AddBloodSugarPage(pluginCollector), null, false, true);
                     //CoreMethods.PushPageModel<AddBloodSugarPageModel>(null, true);
                     break;
 
                 case DataPoints.Meal:
-
+                    await nav.PushPage(new AddMealPage(pluginCollector), null, false, true);
                     break;
 
                 case DataPoints.Medicine:

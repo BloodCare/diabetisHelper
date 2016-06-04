@@ -13,13 +13,14 @@ using System.Globalization;
 using System.Collections.ObjectModel;
 using Syncfusion.SfChart.XForms;
 using MobileFramework.Helpers;
+using MobileFramework.Model;
 
 namespace MobileFramework.MonitoringPlugin.SubPages
 {
     /// <summary>
     /// this is the System overview plugin Page viewModel which is connected to the AlarmPluginPage
     /// </summary>
-    public class AddBloodSugarPageModel : FreshBasePageModel, INotifyPropertyChanged
+    public class AddMealPageModel : FreshBasePageModel, INotifyPropertyChanged
     {
         private string name;
         private string test;
@@ -39,24 +40,24 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         /// sets up eventhandler for structure refreshed event
         /// </summary>
         /// <param name="model"></param>
-        public AddBloodSugarPageModel(IPluginCollector _pluginCollector)
+        public AddMealPageModel(IPluginCollector _pluginCollector)
         {
-            Name = "AddBloodSugar";
+            Name = "AddMeal";
             pluginCollector = _pluginCollector;
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
         {
-           
-          
+
+
         }
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-          
+
         }
 
-     
+
         ///</summary>
         /// returns the Name of the Plugin the PageModel is related to;
         /// </summary>
@@ -76,11 +77,15 @@ namespace MobileFramework.MonitoringPlugin.SubPages
             Date = DateTime.Now;
         }
 
-        public double BloodSugarValue { get; set; }
+        public double BreadUnits { get; set; }
+
+        public double EnergyAmount { get; set; }
 
         public DateTime Date { get; set; }
 
         public TimeSpan Time { get; set; }
+
+        public List<Ingredient> Ingredients { get; set; }
 
         public Command AddDataPoint
         {
@@ -90,12 +95,13 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                 return new Command(() =>
                 {
                    MonitoringPluginSettingsModel tmpSettingsModel =  (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
-                    BloodSugarDataPoint tmpPoint = new BloodSugarDataPoint();
+                    MealDataPoint tmpPoint = new MealDataPoint();
                     DateTime tmpDateTime = new DateTime(Date.Year, Date.Month, Date.Day, Time.Hours, Time.Minutes, Time.Seconds);
-                    tmpPoint.BloodSugarLevel = BloodSugarValue;
+                    tmpPoint.BreadUnits = BreadUnits;
+                    tmpPoint.EnergyAmount = EnergyAmount;
                     tmpPoint.Date = tmpDateTime;
 
-                    tmpSettingsModel.BloodSugarDataPoints.Add(tmpPoint);
+                    tmpSettingsModel.MealDataPoints.Add(tmpPoint);
 
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();
                     nav.PopPage(false, true);

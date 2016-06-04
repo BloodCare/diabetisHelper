@@ -16,12 +16,12 @@ namespace MobileFramework.MonitoringPlugin.SubPages
     /// <summary>
     /// the entry point of the alarmplugin, which will be called from navigation in master detail view
     /// </summary>
-    public partial class AddBloodSugarPage : ContentPage
+    public partial class AddMealPage : ContentPage
     {
-        private AddBloodSugarPageModel model;
-        public AddBloodSugarPage(IPluginCollector pluginCollector)
+        private AddMealPageModel model;
+        public AddMealPage(IPluginCollector pluginCollector)
         {
-            this.BindingContext = new AddBloodSugarPageModel(pluginCollector);
+            this.BindingContext = new AddMealPageModel(pluginCollector);
             InitializeComponent();
             //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
 
@@ -38,7 +38,7 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         /// </summary>
         protected  override void OnAppearing()
         {
-            model = (AddBloodSugarPageModel)this.BindingContext;
+            model = (AddMealPageModel)this.BindingContext;
             model.preSetFields();
         }
 
@@ -52,6 +52,8 @@ namespace MobileFramework.MonitoringPlugin.SubPages
       
         }
 
+       
+        
 
     }
 }
