@@ -1,26 +1,33 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileFramework.ReminderPlugin.ReminderListPage">
-	<ContentPage.Content>
-	<StackLayout Orientation="Vertical">
-		<ListView ItemsSource="{Binding ReminderList}" SelectedItem="{Binding SelectedReminder}">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<ViewCell.View>
-							<StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-								<Label VerticalOptions="Center" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
-								<Switch IsToggled="{Binding isActive}" HorizontalOptions="End" />
-							</StackLayout>
-						</ViewCell.View>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-		<StackLayout Orientation="Horizontal">
-		<Button x:Name="btnAddReminder" Command="{Binding AddReminder}" Text="Add Reminder" />
-		<Button x:Name="btnAddReminderToCalender" Command="{Binding AddReminderToCalender}" Text="Add Appointment To Calander" />
-		<Button Text="Add Emergency Reminder" />		
-		</StackLayout>
-		</StackLayout>
-	</ContentPage.Content>
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+      <ListView x:Name="reminderListView" ItemsSource="{Binding ReminderList}" SelectedItem="{Binding SelectedReminder}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View x:Name="textCell">
+                <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                  <Label x:Name="textCell" VerticalOptions="Center" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
+                  <Switch x:Name="enableSwitch" IsToggled="{Binding isActive,  Mode=TwoWay}" HorizontalOptions="End"
+                          />
+                </StackLayout>
+              </ViewCell.View>
+              <ViewCell.ContextActions>
+                <MenuItem CommandParameter="{Binding OnMore}" Text="More" />
+                <MenuItem BindingContext="{Binding Source={x:Reference reminderListView}, Path=BindingContext}" Command="{Binding OnDelete}"
+                          CommandParameter="{Binding Source={x:Reference textCell}, Path=BindingContext}"
+               Text="Delete" IsDestructive="True" />
+              </ViewCell.ContextActions>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="btnAddReminder" Command="{Binding AddReminder}" Text="Add Reminder" />
+        <Button x:Name="btnAddReminderToCalender" Command="{Binding AddReminderToCalender}" Text="Add Appointment To Calander" />
+        <Button Text="Add Emergency Reminder" />
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
