@@ -47,6 +47,7 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         {
             Name = "AddMeal";
             pluginCollector = _pluginCollector;
+            Ingredients = new List<Ingredient>();
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
@@ -59,7 +60,10 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         {
             if(ingredientPage != null && ingredientPageModel != null)
             {
-                Ingredients= ingredientPageModel.Ingredients;
+                List<Ingredient> tmpList = new List<Ingredient>();
+                tmpList.AddRange(Ingredients);
+                tmpList.Add(ingredientPageModel.Ingredient);
+                Ingredients = tmpList;
             }
         }
 

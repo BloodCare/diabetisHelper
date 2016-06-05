@@ -48,7 +48,7 @@ namespace MobileFramework.MonitoringPlugin
             pluginCollector = _pluginCollector;
             
            settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
-            Ingredients = new List<Ingredient>();
+           
 
          
 
@@ -87,7 +87,7 @@ namespace MobileFramework.MonitoringPlugin
 
         public double EnergyAmount { get; set; }
 
-       public  List<Ingredient> Ingredients { get; set; }
+       public  Ingredient Ingredient { get; set; }
 
         public Command AddIngredient
         {
@@ -102,7 +102,7 @@ namespace MobileFramework.MonitoringPlugin
                     tmpIngredient.BreadUnits = BreadUnits;
                     tmpIngredient.EnergyAmount = EnergyAmount;
 
-                    Ingredients.Add(tmpIngredient);
+                    Ingredient = tmpIngredient;
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();
                     nav.PopPage(false, true);
                 });
