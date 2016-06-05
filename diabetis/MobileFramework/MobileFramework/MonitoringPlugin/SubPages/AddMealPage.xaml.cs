@@ -20,6 +20,8 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         public AddMealPage(IPluginCollector pluginCollector)
         {
             this.BindingContext = new AddMealPageModel(pluginCollector);
+            model = (AddMealPageModel)this.BindingContext;
+            model.WireEvents(this);
             InitializeComponent();
             //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
 
@@ -36,8 +38,9 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         /// </summary>
         protected  override void OnAppearing()
         {
-            model = (AddMealPageModel)this.BindingContext;
+            
             model.preSetFields();
+            
         }
 
 
@@ -49,9 +52,6 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         {
       
         }
-
-       
-        
 
     }
 }

@@ -23,16 +23,13 @@ namespace MobileFramework.MonitoringPlugin
 
         private SfChart chart;
         LineSeries lineSeries;
-        public AddIngredientPage()
+        
+        public AddIngredientPage(AddIngredientPageModel _model)
         {
-            
+            this.BindingContext = _model;
+            model = _model;
             InitializeComponent();
-            //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
-
-
-            // var test = Activator.CreateInstance((from KeyValuePair<String, Type> tmp in PluginCollector.Instance.Plugins where tmp.Key == "AlarmPlugin" select tmp.Value).FirstOrDefault());
-
-
+            
         }
 
 
@@ -56,16 +53,7 @@ namespace MobileFramework.MonitoringPlugin
       
         }
 
-        public Command AddDatapoints
-        {
-            get
-            {
-                return new Command(async () =>
-                {
-                
-                });
-            }
-        }
+       
 
     }
 }

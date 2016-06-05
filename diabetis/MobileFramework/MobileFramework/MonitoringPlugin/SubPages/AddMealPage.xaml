@@ -21,6 +21,7 @@
 
       <Label Text="Energy (total):" HorizontalOptions="End"></Label>
       <Label Text="{Binding EnergyAmount}" HorizontalOptions="End"></Label>
+      <Button Text="Add" Command="{Binding AddIngredient}"></Button>
     </StackLayout>
 
     <ListView  x:Name="listView" ItemsSource="{Binding Ingredients}">
@@ -29,9 +30,12 @@
           <ViewCell>
             <StackLayout BackgroundColor="#eee"  Orientation="Vertical">
               <Label Text="{Binding Name}"></Label>
-              <StackLayout Orientation="Horizontal">
+              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Breadunits: "></Label>
                 <Label Text="{Binding BreadUnits}"></Label>
-                
+
+
+                <Label Text="Energyamount: " HorizontalOptions="EndAndExpand"></Label>
                 <Label Text="{Binding EnergyAmount}"></Label>
               </StackLayout>
             </StackLayout>

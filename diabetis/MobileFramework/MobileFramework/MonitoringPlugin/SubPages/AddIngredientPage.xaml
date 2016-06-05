@@ -8,6 +8,29 @@
              Padding="10"
              BackgroundColor="White">
 
+  <StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+      <Label Text="Name:"></Label>
+      <Entry Keyboard="Text" HorizontalOptions="FillAndExpand" Text="{Binding IngredientName}"></Entry>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+      <Label Text="Amount (g):"></Label>
+      <Entry Keyboard="Numeric" HorizontalOptions="FillAndExpand" Text="{Binding Amount}"></Entry>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+      <Label Text="BreadUnits:"></Label>
+      <Entry Keyboard="Numeric"  HorizontalOptions="FillAndExpand" Text="{Binding BreadUnits}"></Entry>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+      <Label Text="Energyamount:"></Label>
+      <Entry Keyboard="Numeric"  HorizontalOptions="FillAndExpand" Text="{Binding EnergyAmount}"></Entry>
+    </StackLayout>
 
+    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+      <Button Text="Cancel" ></Button>
+      <Button Text ="Add" Command="{Binding AddIngredient}"></Button>
+
+    </StackLayout>
+  </StackLayout>
 
 </ContentPage>

@@ -26,6 +26,9 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         private string test;
         IPluginCollector pluginCollector;
         public event PropertyChangedEventHandler PropertyChanged;
+
+        AddIngredientPage ingredientPage;
+        AddIngredientPageModel ingredientPageModel;
         public virtual void OnPropertyChanged(string propertyName)
         {
             var propertyChanged = PropertyChanged;
@@ -54,7 +57,10 @@ namespace MobileFramework.MonitoringPlugin.SubPages
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-
+            if(ingredientPage != null && ingredientPageModel != null)
+            {
+                Ingredients= ingredientPageModel.Ingredients;
+            }
         }
 
 
@@ -108,6 +114,22 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                 });
             }
         }
-        
+
+        public Command AddIngredient
+        {
+            get
+            {
+                //test notification
+                return new Command(async ()  =>
+                {
+                    ingredientPageModel = new AddIngredientPageModel(pluginCollector);
+                    ingredientPage = new AddIngredientPage(ingredientPageModel);
+
+                    FreshMasterDetailNavigation nav = App.GetNavigationContainer();
+                    await nav.PushPage(ingredientPage, null, false, true);
+                });
+            }
+        }
+
     }
 }

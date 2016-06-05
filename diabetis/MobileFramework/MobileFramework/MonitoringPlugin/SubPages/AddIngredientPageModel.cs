@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using Syncfusion.SfChart.XForms;
 using MobileFramework.MonitoringPlugin.SubPages;
 using MobileFramework.Helpers;
+using MobileFramework.Model;
 
 namespace MobileFramework.MonitoringPlugin
 {
@@ -47,7 +48,7 @@ namespace MobileFramework.MonitoringPlugin
             pluginCollector = _pluginCollector;
             
            settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
-
+            Ingredients = new List<Ingredient>();
 
          
 
@@ -78,9 +79,37 @@ namespace MobileFramework.MonitoringPlugin
             }
         }
 
-        
-     
+        public string IngredientName { get; set; }
+
+        public double Amount { get; set; }
+
+        public double BreadUnits { get; set; }
+
+        public double EnergyAmount { get; set; }
+
+       public  List<Ingredient> Ingredients { get; set; }
+
+        public Command AddIngredient
+        {
+            get
+            {
+                //test notification
+                return new Command(() =>
+                {
+                    Ingredient tmpIngredient = new Ingredient();
+                    tmpIngredient.Name = IngredientName;
+                    tmpIngredient.amount = Amount;
+                    tmpIngredient.BreadUnits = BreadUnits;
+                    tmpIngredient.EnergyAmount = EnergyAmount;
+
+                    Ingredients.Add(tmpIngredient);
+                    FreshMasterDetailNavigation nav = App.GetNavigationContainer();
+                    nav.PopPage(false, true);
+                });
+            }
         }
+
+    }
 
     }
 
