@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="MobileFramework.MonitoringPlugin.SubPages.AddMedicinePage"
+             
+             Padding="10"
+             BackgroundColor="White">
+
+  <Label Text="{Binding Name}"></Label>
+  <StackLayout HorizontalOptions="CenterAndExpand">
+    <DatePicker  Date="{Binding Date}">
+      <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+    </DatePicker>
+    <TimePicker x:Name="timePicker" Time="{Binding Time}" >
+    </TimePicker>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+      <Label Text="Medicine Name:"></Label>
+      <Entry Keyboard="Text" Placeholder="Name" PlaceholderColor="Gray" HorizontalOptions="FillAndExpand" Text="{Binding MedicineName}"></Entry>
+    </StackLayout>
+    <StackLayout x:Name="pickerStack" Orientation="Horizontal">
+      <Label Text="Amount:"></Label>
+      <Entry Keyboard="Numeric" Text="{Binding MedicineAmount}"></Entry>
+      <Picker x:Name="medPicker" SelectedIndex="{Binding MedicineUnitIndex}"></Picker>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+      <Button Text="Cancel" ></Button>
+      <Button Text ="Save" Command="{Binding AddDataPoint}"></Button>
+      
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

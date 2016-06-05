@@ -27,6 +27,7 @@ namespace MobileFramework.MonitoringPlugin
             SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source = ImageSource.FromFile("msm.jpg") } };
             BloodSugarDataPoints = new List<BloodSugarDataPoint>();
             MealDataPoints = new List<MealDataPoint>();
+            MedicineDataPoints = new List<MedicineDataPoint>();
         }
 
         public WidgetView AlarmWidget { get; set; }
@@ -34,5 +35,7 @@ namespace MobileFramework.MonitoringPlugin
         public List<BloodSugarDataPoint> BloodSugarDataPoints {get;set;}
 
         public List<MealDataPoint> MealDataPoints { get; set; }
+
+        public List<MedicineDataPoint> MedicineDataPoints { get; set; }
     }
 }

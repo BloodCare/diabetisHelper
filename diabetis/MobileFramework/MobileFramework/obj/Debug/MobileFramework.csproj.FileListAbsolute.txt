@@ -96,16 +96,6 @@ E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\Mo
 E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.pdb
 E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
 E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MainView.MainPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.ReminderPluginPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderListPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderAddPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderToCalenderPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.Navigation.NavigationPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.OverviewPlugin.OverviewPluginPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.MonitoringPluginPage.xaml.g.cs
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddBloodSugarPage.xaml.g.cs
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.pdb
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\FreshIOC.dll
@@ -125,7 +115,19 @@ C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFram
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Insights.xml
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.xml
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MainView.MainPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.ReminderPluginPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderListPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderAddPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderToCalenderPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.Navigation.NavigationPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.OverviewPlugin.OverviewPluginPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.MonitoringPluginPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddBloodSugarPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddMealPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddIngredientPage.xaml.g.cs
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.pdb
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.csprojResolveAssemblyReference.cache
-C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddMealPage.xaml.g.cs
+C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddMedicinePage.xaml.g.cs

@@ -13,13 +13,15 @@ using Xamarin.Forms;
 
 namespace MobileFramework.MonitoringPlugin.SubPages
 {
-   
-    public partial class AddMealPage : ContentPage
+    /// <summary>
+    /// the entry point of the alarmplugin, which will be called from navigation in master detail view
+    /// </summary>
+    public partial class AddMedicinePage : ContentPage
     {
-        private AddMealPageModel model;
-        public AddMealPage(IPluginCollector pluginCollector)
+        private AddMedicinePageModel model;
+        public AddMedicinePage(IPluginCollector pluginCollector)
         {
-            this.BindingContext = new AddMealPageModel(pluginCollector);
+            this.BindingContext = new AddMedicinePageModel(pluginCollector);
             InitializeComponent();
             //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
 
@@ -36,8 +38,13 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         /// </summary>
         protected  override void OnAppearing()
         {
-            model = (AddMealPageModel)this.BindingContext;
+            model = (AddMedicinePageModel)this.BindingContext;
             model.preSetFields();
+
+            foreach (var entry in Enum.GetNames(typeof(MedicineUnits)).ToList())
+            {
+                medPicker.Items.Add(entry);
+            }
         }
 
 
@@ -50,8 +57,6 @@ namespace MobileFramework.MonitoringPlugin.SubPages
       
         }
 
-       
-        
 
     }
 }

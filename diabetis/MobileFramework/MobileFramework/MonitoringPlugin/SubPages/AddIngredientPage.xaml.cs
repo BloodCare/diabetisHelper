@@ -11,15 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MobileFramework.MonitoringPlugin.SubPages
+namespace MobileFramework.MonitoringPlugin
 {
-   
-    public partial class AddMealPage : ContentPage
+    /// <summary>
+    /// the entry point of the alarmplugin, which will be called from navigation in master detail view
+    /// </summary>
+    public partial class AddIngredientPage : ContentPage
     {
-        private AddMealPageModel model;
-        public AddMealPage(IPluginCollector pluginCollector)
+        private AddIngredientPageModel model;
+        
+
+        private SfChart chart;
+        LineSeries lineSeries;
+        public AddIngredientPage()
         {
-            this.BindingContext = new AddMealPageModel(pluginCollector);
+            
             InitializeComponent();
             //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
 
@@ -36,12 +42,12 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         /// </summary>
         protected  override void OnAppearing()
         {
-            model = (AddMealPageModel)this.BindingContext;
-            model.preSetFields();
+            model = (AddIngredientPageModel)this.BindingContext;
+           
+            
         }
 
 
-        
         /// <summary>
         /// unsubscibes the property changed event when view is closed
         /// </summary>
@@ -50,8 +56,16 @@ namespace MobileFramework.MonitoringPlugin.SubPages
       
         }
 
-       
-        
+        public Command AddDatapoints
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                
+                });
+            }
+        }
 
     }
 }

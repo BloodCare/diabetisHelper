@@ -23,5 +23,14 @@ namespace MobileFramework.MonitoringPlugin.Helpers
 
         public DateTime Date { get; set; }
     }
-    
+
+    public class MedicineDataPoint
+    {
+        public string Name { get; set; }
+
+        public double Amount { get; set; }
+
+        public string Unit { get; set; }
+
+    }
 }

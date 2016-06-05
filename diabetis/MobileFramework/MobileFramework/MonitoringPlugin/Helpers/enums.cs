@@ -8,5 +8,6 @@ namespace MobileFramework.MonitoringPlugin.Helpers
 {
      public enum DataPoints { BloodSugar, Medicine, Meal };
 
+    public enum MedicineUnits { mg, ml, units, pieces}
   
 }

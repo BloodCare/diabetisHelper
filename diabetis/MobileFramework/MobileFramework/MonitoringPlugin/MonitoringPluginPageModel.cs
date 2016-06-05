@@ -131,7 +131,7 @@ namespace MobileFramework.MonitoringPlugin
                     break;
 
                 case DataPoints.Medicine:
-
+                    await nav.PushPage(new AddMedicinePage(pluginCollector), null, false, true);
                     break;
             }
         }
