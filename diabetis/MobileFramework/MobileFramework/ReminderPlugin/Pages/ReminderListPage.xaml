@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileFramework.ReminderPlugin.ReminderListPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileFramework.ReminderPlugin.ReminderListPage"
+             Title="Reminders">
   <ContentPage.Content>
     <StackLayout Orientation="Vertical">
-      <ListView x:Name="reminderListView" ItemsSource="{Binding ReminderList}" SelectedItem="{Binding SelectedReminder}">
+      <ListView RowHeight="50" x:Name="reminderListView" ItemsSource="{Binding ReminderList}" SelectedItem="{Binding SelectedReminder}">
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
               <ViewCell.View x:Name="textCell">
                 <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                  <Label x:Name="textCell" VerticalOptions="Center" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
+                  <Label x:Name="textCell" FontSize="18" VerticalOptions="Center" Text="{Binding Name}" HorizontalOptions="StartAndExpand" />
                   <Switch x:Name="enableSwitch" IsToggled="{Binding isActive,  Mode=TwoWay}" HorizontalOptions="End"
                           />
                 </StackLayout>
