@@ -4,29 +4,18 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
 x:Class="MobileFramework.ReminderPlugin.ReminderAddPage"
 Padding="20">
+<ContentPage.Content>
 <StackLayout>                
-
-<Entry Placeholder="Name" Text="{Binding Name,Mode=TwoWay}">
-  <Entry.Behaviors>
-   <local:MaxLengthValidator MaxLength="25" />
-  </Entry.Behaviors>
-  </Entry> 
-
-  <Entry Placeholder="Description(Max 50 characters)" Text="{Binding Description,Mode=TwoWay}" WidthRequest="200" HeightRequest="100">
-   <Entry.Behaviors>
-   <local:MaxLengthValidator MaxLength="50" />
-  </Entry.Behaviors>
-  </Entry> 
-
-    <Picker x:Name="FeaturePicker" SelectedIndex="{Binding SelectIndex}" HorizontalOptions="FillAndExpand">
+	<Entry Placeholder="Name" Text="{Binding Name}"/>
+ 	<Entry Placeholder="Description(Max 50 characters)" Text="{Binding Description}" WidthRequest="200" HeightRequest="100"/>
+ 	<Picker x:Name="FeaturePicker" SelectedIndex="{Binding SelectIndex}"  HorizontalOptions="FillAndExpand">
         <Picker.Items>
              <x:String>link to feature</x:String> 
             <x:String>Monitoring</x:String> 
             <x:String>Diet Planner</x:String>
         </Picker.Items>
         <Picker.SelectedIndex>0</Picker.SelectedIndex>
-    </Picker> 
-
+    </Picker>
     <Picker x:Name="SoundPicker" HorizontalOptions="FillAndExpand">
         <Picker.Items>
          <x:String>Sound</x:String>
@@ -34,19 +23,15 @@ Padding="20">
             <x:String>Buletin</x:String>
         </Picker.Items>
         <Picker.SelectedIndex>0</Picker.SelectedIndex>
-    </Picker>
-
-
+    </Picker> 
     <DatePicker Date ="{Binding Date}" Format="D">
-     <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
-     </DatePicker>
-    <TimePicker Time ="{Binding Time}" Format="T" />
-
-  <StackLayout Orientation="Horizontal">
-  <Button x:Name="btnSaveReminder" Command="{Binding saveReminder}" Text="Save" TextColor="White" BackgroundColor="Green" WidthRequest="100" />
-  <Button x:Name="btnCancelReminder" Command="{Binding cancelReminder}" Text="Cancel" TextColor="White" BackgroundColor="Gray" WidthRequest="100" />
-  </StackLayout>
-
-  </StackLayout>
-	
+     	<DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+    </DatePicker>
+    <TimePicker Time ="{Binding Time}" Format="T"/>
+   <StackLayout Orientation="Horizontal">
+   		<Button x:Name="btnSaveReminder" Command="{Binding saveReminder}" Text="Save" TextColor="White" BackgroundColor="Green" WidthRequest="100" />
+  		<Button x:Name="btnCancelReminder" Command="{Binding cancelReminder}" Text="Cancel" TextColor="White" BackgroundColor="Gray" WidthRequest="100" />
+ 	</StackLayout>
+ </StackLayout>
+ </ContentPage.Content>
 </ContentPage>

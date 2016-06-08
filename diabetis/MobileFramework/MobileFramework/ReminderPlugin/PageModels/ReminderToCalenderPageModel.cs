@@ -13,25 +13,29 @@ namespace MobileFramework.ReminderPlugin
 
 		}
 
-		public List<string> featureList { get; set; }
-		public DateTime Date { get; set; }
-		public TimeSpan Time { get; set; }
-		Reminder r = new Reminder ();
+		String _rName = string.Empty;
+		string _prName = string.Empty;
+		String _rDescription = string.Empty;
+		String _selFeature = string.Empty;
+		public List<string> featureList = new List<string>();
+		DateTime _Date = DateTime.Now;
+		TimeSpan _Time;
+
 		public string Name {
 			get{ 
-				return r.Name;
+				return _rName;
 			}
 			set{ 
-				r.Name = value;			
+				_rName = value;			
 			}
 		}
 
 		public string Description {
 			get{ 
-				return r.Description;
+				return _rDescription;
 			}
 			set{
-				r.Description = value;
+				_rDescription = value;
 			}
 		}
 
@@ -48,17 +52,19 @@ namespace MobileFramework.ReminderPlugin
 			{
 				_index = value;
 
-				// tmp has string from selection...
-				var tmp = featureList [_index];
-				//OnPropertyChanged("SelectIndex");
 			}
 		}
+
+		public DateTime Date { get { return _Date;} set{ _Date = value; } }
+
+		public TimeSpan Time { get{ return _Time;} set{_Time = value;} }
+
 
 		//presetting the picker time and date
 		public void preSetFields()
 		{
-			Time = DateTime.Now.TimeOfDay;
-			Date = DateTime.Now;
+			_Time = DateTime.Now.TimeOfDay;
+			_Date = DateTime.Now;
 		}
 
 		public Command saveCalReminder
@@ -90,5 +96,3 @@ namespace MobileFramework.ReminderPlugin
 		}
 	}
 }
-
-

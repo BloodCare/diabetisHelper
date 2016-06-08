@@ -5,47 +5,50 @@ using Xamarin.Forms;
 using MobileFramework.PluginManager;
 using System.Diagnostics;
 using FreshMvvm;
+using System.Windows.Input;
 
 namespace MobileFramework.ReminderPlugin
 {
 	public class ReminderAddPageModel : FreshBasePageModel
 	{
-		//public String _rName = string.Empty;
-		//public String _rDescription = string.Empty;
-		//public List<string> soundList {get; set;}
-		//public string _feature { get; set;}
-		public List<string> featureList { get; set; }
-		public DateTime Date { get; set; }
-		public TimeSpan Time { get; set; }
 
-		public ReminderAddPageModel ()
-		{
+		String _rName = string.Empty;
+		string _prName = string.Empty;
+		String _rDescription = string.Empty;
+		String _selFeature = string.Empty;
+		public List<string> featureList = new List<string>();
+		DateTime _Date = DateTime.Now;
+		TimeSpan _Time;
 
+		public ReminderAddPageModel (){
 		}
 
-		Reminder r = new Reminder ();
 
-		public string Name {
-			get{ 
-				return r.Name;
-			}
-			set{ 
-				r.Name = value;			
-			}
+		public string Name
+		{
+			get { return _rName; }
+			set { 
+				_rName = value;
+				if(_rName.Length>25)
+					_rName = value.Substring(0,25); 
+				//_rName = value;
+				Debug.WriteLine (_rName);}
 		}
 
 		public string Description {
 			get{ 
-				return r.Description;
+				return _rDescription;
 			}
 			set{
-				r.Description = value;
+				_rDescription = value;
+				if(_rDescription.Length>50)
+					_rDescription = value.Substring(0,50); 
 			}
 		}
 
 
-		// method to obtain feature index and save the string in a tmp
-		int _index;
+		// method to obtain featurelist index
+		int _index = 0;
 		public int SelectIndex
 		{ 
 			get
@@ -56,47 +59,21 @@ namespace MobileFramework.ReminderPlugin
 			{
 				_index = value;
 
-				// tmp has string from selection...
-				var tmp = featureList [_index];
-				//OnPropertyChanged("SelectIndex");
 			}
+
 		}
+
+		public DateTime Date { get { return _Date;} set{ _Date = value; } }
+
+		public TimeSpan Time { get{ return _Time;} set{_Time = value;} }
+
 
 		//presetting the picker time and date
 		public void preSetFields()
 		{
-			Time = DateTime.Now.TimeOfDay;
-			Date = DateTime.Now;
+			_Time = DateTime.Now.TimeOfDay;
+			_Date = DateTime.Now;
 		}
-
-
-
-		/*string _displayText;
-
-		public string DisplayText
-		{ 
-			get
-			{
-				return _displayText;
-			}
-			set
-			{
-				_displayText = value;
-				OnPropertyChanged("DisplayText");
-			}
-
-		}
-			
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		protected virtual void OnPropertyChanged(string propertyName)
-		{
-			var changed = PropertyChanged;
-			if (changed != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}*/
 
 
 
@@ -109,11 +86,14 @@ namespace MobileFramework.ReminderPlugin
 					{
 						//_rName=r.Name;
 						CoreMethods.PopToRoot(true);
-						//Debug.WriteLine(_rName);
+						//_selFeature = featureList[_index];
+						//Debug.WriteLine(_selFeature);
+						//Debug.WriteLine(_selFeature);
 
 					});
 			}
 		}
+
 
 		public Command cancelReminder
 		{
