@@ -6,20 +6,20 @@ xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
 Padding="20">
 <ContentPage.Content>
 <StackLayout>                
- <Entry Placeholder="Name" Text="{Binding Name}"/>
- <Entry Placeholder="Description(Max 50 characters)" Text="{Binding Description}" WidthRequest="200" HeightRequest="100"/>
-   <Picker x:Name="FeaturePicker1" SelectedIndex="{Binding SelectIndex}" HorizontalOptions="FillAndExpand">
+ <Entry x:Name="name" Placeholder="Name" Text="{Binding Name}"/>
+ <Entry x:Name="description" Placeholder="Description(Max 50 characters)" Text="{Binding Description}" WidthRequest="200" HeightRequest="100"/>
+   <!--<Picker x:Name="FeaturePicker1" SelectedIndex="{Binding SelectIndex}" HorizontalOptions="FillAndExpand">
         <Picker.Items>
              <x:String>link to feature</x:String> 
             <x:String>Monitoring</x:String> 
             <x:String>Diet Planner</x:String>
         </Picker.Items>
         <Picker.SelectedIndex>0</Picker.SelectedIndex>
-    </Picker>
-    <DatePicker  Date ="{Binding Date}" Format="D">
+    </Picker> -->
+    <DatePicker x:Name="date" Date ="{Binding Date}" Format="D">
     	<DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
     </DatePicker>
-    <TimePicker Time ="{Binding Time}" Format="T" />
+    <TimePicker x:Name="time" Time ="{Binding Time}" Format="T" />
    <StackLayout Orientation="Horizontal">
   	<Button x:Name="btnSaveReminder" Command="{Binding saveCalReminder}" Text="Save" TextColor="White" BackgroundColor="Green" WidthRequest="100" />
   	<Button x:Name="btnCancelReminder" Command="{Binding cancelCalReminder}" Text="Cancel" TextColor="White" BackgroundColor="Gray" WidthRequest="100" />

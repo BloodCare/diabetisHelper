@@ -125,6 +125,7 @@
     <Compile Include="ReminderPlugin\Pages\ReminderToCalenderPage.xaml.cs">
       <DependentUpon>ReminderToCalenderPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReminderPlugin\IReminderService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
