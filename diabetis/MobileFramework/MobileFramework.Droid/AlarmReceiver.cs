@@ -26,7 +26,7 @@ namespace MobileFramework.Droid
 			Notification.Builder builder = new Notification.Builder(Android.App.Application.Context)
 				.SetContentIntent(contentIntent)
 				.SetContentTitle(title)
-				.SetContentTexts(message)
+				.SetContentText(message)
 				.SetSmallIcon(Resource.Drawable.icon)
 				.SetDefaults(NotificationDefaults.Sound)
 				.SetShowWhen(true)
