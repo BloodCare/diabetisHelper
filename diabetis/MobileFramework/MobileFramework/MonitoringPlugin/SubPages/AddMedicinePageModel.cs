@@ -101,6 +101,7 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                     tmpPoint.Name = MedicineName;
                     tmpPoint.Amount = MedicineAmount;
                     tmpPoint.Unit = MedicineUnits[MedicineUnitIndex];
+                    tmpPoint.Date = tmpDateTime;
                     tmpSettingsModel.MedicineDataPoints.Add(tmpPoint);
 
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();

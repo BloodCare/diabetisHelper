@@ -110,7 +110,7 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                     tmpPoint.BreadUnits = BreadUnits;
                     tmpPoint.EnergyAmount = EnergyAmount;
                     tmpPoint.Date = tmpDateTime;
-
+                    tmpPoint.Ingredients = Ingredients;
                     tmpSettingsModel.MealDataPoints.Add(tmpPoint);
 
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();

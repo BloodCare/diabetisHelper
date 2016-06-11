@@ -46,27 +46,10 @@ namespace MobileFramework.MonitoringPlugin
             Name = PluginNames.MonitoringPluginName;
             pluginCollector = _pluginCollector;
             BloodSugarDataPoints = new ObservableCollection<ChartDataPoint>();
-           settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
-
-
             MealDataPoints = new ObservableCollection<ChartDataPoint>();
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 8, 33, 0), 56 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 12, 45, 0), 80 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 23, 18, 15, 0), 76 + 10));
+            MedDataPoints = new ObservableCollection<ChartDataPoint>();
+            settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
             
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 8, 0, 0), 90 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 11, 37, 0), 66 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 24, 16, 9, 0), 60 + 10));
-            
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 6, 30, 0), 40 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 13, 0, 0), 70 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 25, 22, 20, 0), 88 + 10));
-            
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 26, 8, 33, 0), 45 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 27, 8, 33, 0), 97 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 28, 8, 33, 0), 42 + 10));
-            MealDataPoints.Add(new ChartDataPoint(new DateTime(2016, 5, 29, 8, 33, 0), 74 + 10));
-
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
@@ -78,13 +61,56 @@ namespace MobileFramework.MonitoringPlugin
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             BloodSugarDataPoints.Clear();
-          foreach(BloodSugarDataPoint tmpPoint in settingsModel.BloodSugarDataPoints)
+            foreach (BloodSugarDataPoint tmpPoint in settingsModel.BloodSugarDataPoints)
             {
-                BloodSugarDataPoints.Add(new ChartDataPoint(tmpPoint.Date, tmpPoint.BloodSugarLevel));
+                ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, tmpPoint.BloodSugarLevel);
+                
+                BloodSugarDataPoints.Add(point);
+            }
+            foreach(MealDataPoint tmpPoint in settingsModel.MealDataPoints)
+            {
+                ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
+                point.YValue = calcDataPointsYValue(point);
+                tmpPoint.YValue = point.YValue;
+                MealDataPoints.Add(point);
+            }
+
+            foreach (MedicineDataPoint tmpPoint in settingsModel.MedicineDataPoints)
+            {
+                ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
+                point.YValue = calcDataPointsYValue(point);
+                tmpPoint.YValue = point.YValue;
+                MealDataPoints.Add(point);
             }
         }
 
-     
+        private double calcDataPointsYValue(ChartDataPoint point)
+        {
+            List<ChartDataPoint> tmpList = new List<ChartDataPoint>(BloodSugarDataPoints);
+            tmpList.Add(point);
+            tmpList = tmpList.OrderBy(o => o.XValue).ToList();
+            
+            int index = tmpList.IndexOf(point);
+            if (index > 0)
+            {
+
+                double yValAncestor = tmpList[index - 1].YValue;
+                double xValAncetor = ((DateTime)tmpList[index - 1].XValue).Ticks;
+                double yValFollower = tmpList[index + 1].YValue;
+                double xValFollower = ((DateTime)tmpList[index + 1].XValue).Ticks;
+                double xPoint = ((DateTime)point.XValue).Ticks;
+                double m = (yValFollower - yValAncestor) / (xValFollower - xValAncetor);
+                double y = m * (xPoint - xValAncetor) + yValAncestor;
+                point.YValue = y;
+            }
+
+            return point.YValue;
+        }
+
+        public string generateID()
+        {
+            return Guid.NewGuid().ToString("N");
+        }
         ///</summary>
         /// returns the Name of the Plugin the PageModel is related to;
         /// </summary>
