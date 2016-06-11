@@ -17,6 +17,7 @@ namespace MobileFramework.ReminderPlugin
         {
             ReminderDataService reminderDataService = ReminderDataService.ReminderDataServ; //new ReminderDataService ();
             _reminderDataService = reminderDataService;
+            ReminderList = new ObservableCollection<Reminder>();
         }
 
         public ObservableCollection<Reminder> ReminderList
