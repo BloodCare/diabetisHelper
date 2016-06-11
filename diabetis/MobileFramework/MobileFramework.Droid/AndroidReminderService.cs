@@ -50,6 +50,28 @@ namespace MobileFramework.Droid
 				eventValues);
 
 		}
+
+		public void RemindNormal(DateTime dateTime, string title, string message)
+		{
+			var context = Xamarin.Forms.Forms.Context;
+			Intent alarmIntent = new Intent(Forms.Context, typeof(AlarmReceiver));
+			alarmIntent.PutExtra("message", message);
+			alarmIntent.PutExtra("title", title);
+
+			// can use this long to set alarm time.
+			long x = dateTime.ToAndroidTimestamp();
+			long now = System.DateTime.Now.ToAndroidTimestamp();
+			long triggerTime = x - now;
+
+			PendingIntent pendingIntent = PendingIntent.GetBroadcast(context, 0, alarmIntent, PendingIntentFlags.OneShot);
+			var alarmManager = (AlarmManager)context.GetSystemService(Context.AlarmService) as AlarmManager;
+
+			//  set triggerTime milliseconds.
+			alarmManager.SetExact(AlarmType.ElapsedRealtimeWakeup, SystemClock.ElapsedRealtime() + triggerTime, pendingIntent);
+
+
+		}
+
 		#endregion
 		long GetDateTimeMS(int yr, int month, int day, int hr, int min)
 		{
