@@ -121,6 +121,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlarmReceiver.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="Helpers\Segment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

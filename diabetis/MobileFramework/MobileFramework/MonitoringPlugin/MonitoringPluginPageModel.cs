@@ -45,7 +45,7 @@ namespace MobileFramework.MonitoringPlugin
         {
             Name = PluginNames.MonitoringPluginName;
             pluginCollector = _pluginCollector;
-            BloodSugarDataPoints = new ObservableCollection<ChartDataPoint>();
+            BloodSugarDataPoints = new List<ChartDataPoint>();
             MealDataPoints = new ObservableCollection<ChartDataPoint>();
             MedDataPoints = new ObservableCollection<ChartDataPoint>();
             settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
@@ -67,6 +67,8 @@ namespace MobileFramework.MonitoringPlugin
                 
                 BloodSugarDataPoints.Add(point);
             }
+
+
             foreach(MealDataPoint tmpPoint in settingsModel.MealDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
@@ -74,13 +76,14 @@ namespace MobileFramework.MonitoringPlugin
                 tmpPoint.YValue = point.YValue;
                 MealDataPoints.Add(point);
             }
+            BloodSugarDataPoints = BloodSugarDataPoints.OrderBy(o => o.XValue).ToList();
 
             foreach (MedicineDataPoint tmpPoint in settingsModel.MedicineDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
                 point.YValue = calcDataPointsYValue(point);
                 tmpPoint.YValue = point.YValue;
-                MealDataPoints.Add(point);
+                MedDataPoints.Add(point);
             }
         }
 
@@ -124,7 +127,7 @@ namespace MobileFramework.MonitoringPlugin
             }
         }
 
-        public ObservableCollection<ChartDataPoint> BloodSugarDataPoints
+        public List<ChartDataPoint> BloodSugarDataPoints
         {
             get;
             set;

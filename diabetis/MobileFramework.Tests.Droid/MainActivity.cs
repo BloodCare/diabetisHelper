@@ -23,7 +23,12 @@ namespace MobileFramework.Tests.Droid
             //  AddTestAssembly(Assembly.GetExecutingAssembly());
               AddTestAssembly(typeof(RemindersTest).Assembly);
 
+            AddTestAssembly(typeof(MonitoringTests).Assembly);
+            
+
             AddExecutionAssembly(typeof(ExtensibilityPointFactory).Assembly);
+
+
             // or in any reference assemblies			
 
             //AddTestAssembly(typeof(PortableTests).Assembly);
