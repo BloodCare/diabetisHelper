@@ -87,7 +87,7 @@ namespace MobileFramework.MonitoringPlugin
             }
         }
 
-        private double calcDataPointsYValue(ChartDataPoint point)
+        public double calcDataPointsYValue(ChartDataPoint point)
         {
             List<ChartDataPoint> tmpList = new List<ChartDataPoint>(BloodSugarDataPoints);
             tmpList.Add(point);
