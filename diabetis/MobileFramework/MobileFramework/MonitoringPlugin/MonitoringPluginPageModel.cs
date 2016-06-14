@@ -60,7 +60,7 @@ namespace MobileFramework.MonitoringPlugin
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-            
+            LoadData();
         }
 
         public void LoadData()
