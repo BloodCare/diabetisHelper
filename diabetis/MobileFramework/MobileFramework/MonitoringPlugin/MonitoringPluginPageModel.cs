@@ -60,16 +60,21 @@ namespace MobileFramework.MonitoringPlugin
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
+            
+        }
+
+        public void LoadData()
+        {
             BloodSugarDataPoints.Clear();
             foreach (BloodSugarDataPoint tmpPoint in settingsModel.BloodSugarDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, tmpPoint.BloodSugarLevel);
-                
+
                 BloodSugarDataPoints.Add(point);
             }
 
 
-            foreach(MealDataPoint tmpPoint in settingsModel.MealDataPoints)
+            foreach (MealDataPoint tmpPoint in settingsModel.MealDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
                 point.YValue = calcDataPointsYValue(point);
@@ -86,7 +91,6 @@ namespace MobileFramework.MonitoringPlugin
                 MedDataPoints.Add(point);
             }
         }
-
         public double calcDataPointsYValue(ChartDataPoint point)
         {
             List<ChartDataPoint> tmpList = new List<ChartDataPoint>(BloodSugarDataPoints);

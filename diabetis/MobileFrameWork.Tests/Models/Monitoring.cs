@@ -1,4 +1,6 @@
 ﻿using MobileFramework.MonitoringPlugin;
+using MobileFramework.MonitoringPlugin.Helpers;
+using MobileFramework.MonitoringPlugin.SubPages;
 using MobileFramework.PluginManager;
 using Syncfusion.SfChart.XForms;
 using System;
@@ -30,5 +32,26 @@ namespace MobileFrameWork.Tests.Models
            Assert.True(result1 == 75 && result2 == 100 && result3 == 125);
            
         }
+
+        [Fact]
+        public void CheckAddBloodSugarDataPoint()
+        {
+            PluginCollector coll = new PluginCollector();
+            MonitoringPluginPageModel model = new MonitoringPluginPageModel(coll);
+
+            model.AddDatapoints(DataPoints.BloodSugar);
+
+            AddBloodSugarPageModel bmodel = new AddBloodSugarPageModel(coll);
+            bmodel.BloodSugarValue = 40;
+            DateTime tmpDate = DateTime.Now;
+            bmodel.Date = tmpDate;
+            var x = bmodel.AddDataPoint;
+
+            model.LoadData();
+            ChartDataPoint bsPoint = (from ChartDataPoint poi in model.BloodSugarDataPoints where (DateTime)poi.XValue == tmpDate select poi).ToList().FirstOrDefault();
+            Assert.True((DateTime)bsPoint.XValue == tmpDate);
+
+        }
+
     }
 }
