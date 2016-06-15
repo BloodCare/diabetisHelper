@@ -9,15 +9,15 @@
              BackgroundColor="White">
 
   <Label Text="{Binding Name}"></Label>
-  <StackLayout HorizontalOptions="CenterAndExpand">
+  <StackLayout HorizontalOptions="FillAndExpand">
     <DatePicker  Date="{Binding Date}">
       <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
     </DatePicker>
     <TimePicker x:Name="timePicker" Time="{Binding Time}" >
     </TimePicker>
     <StackLayout Orientation="Horizontal">
-      <Label Text="BloodSugar Value:"></Label>
-      <Entry Keyboard="Numeric" Text="{Binding BloodSugarValue}"></Entry>
+      <Label HorizontalOptions="Start"  Text="BloodSugar Value:"></Label>
+      <Entry WidthRequest="50"  Keyboard="Numeric" Text="{Binding BloodSugarValue}"></Entry>
     </StackLayout>
     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
       <Button Text="Cancel" ></Button>

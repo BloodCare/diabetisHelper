@@ -50,6 +50,10 @@
       <chart:ScatterSeries ItemsSource="{Binding MealDataPoints}" StrokeColor="Green" Color="Green" ScatterHeight="10" ScatterWidth="10" >
         
       </chart:ScatterSeries>
+
+      <chart:ScatterSeries ItemsSource="{Binding MedDataPoints}" StrokeColor="Blue" Color="Blue" ScatterHeight="20" ScatterWidth="20" >
+
+      </chart:ScatterSeries>
       
     </chart:SfChart>
 
