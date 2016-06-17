@@ -26,7 +26,7 @@ namespace MobileFramework.MonitoringPlugin
         private string test;
         IPluginCollector pluginCollector;
         public event PropertyChangedEventHandler PropertyChanged;
-        MonitoringPluginSettingsModel settingsModel;
+    
         public virtual void OnPropertyChanged(string propertyName)
         {
             var propertyChanged = PropertyChanged;
@@ -48,7 +48,7 @@ namespace MobileFramework.MonitoringPlugin
             BloodSugarDataPoints = new List<ChartDataPoint>();
             MealDataPoints = new ObservableCollection<ChartDataPoint>();
             MedDataPoints = new ObservableCollection<ChartDataPoint>();
-            settingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
+            SettingsModel = (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
             
         }
 
@@ -65,25 +65,35 @@ namespace MobileFramework.MonitoringPlugin
 
         public void LoadData()
         {
+            SettingsModel.BloodSugarDataPoints = SettingsModel.BloodSugarDataPoints.OrderBy(o => o.Date).ToList();
+            SettingsModel.MealDataPoints = SettingsModel.MealDataPoints.OrderBy(o => o.Date).ToList();
+            SettingsModel.MedicineDataPoints = SettingsModel.MedicineDataPoints.OrderBy(o => o.Date).ToList();
+
             BloodSugarDataPoints.Clear();
-            foreach (BloodSugarDataPoint tmpPoint in settingsModel.BloodSugarDataPoints)
+            MealDataPoints.Clear();
+            MedDataPoints.Clear();
+
+            foreach (BloodSugarDataPoint tmpPoint in SettingsModel.BloodSugarDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, tmpPoint.BloodSugarLevel);
 
                 BloodSugarDataPoints.Add(point);
             }
 
+            BloodSugarDataPoints = new List<ChartDataPoint>(BloodSugarDataPoints);
 
-            foreach (MealDataPoint tmpPoint in settingsModel.MealDataPoints)
+
+            foreach (MealDataPoint tmpPoint in SettingsModel.MealDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
                 point.YValue = calcDataPointsYValue(point);
                 tmpPoint.YValue = point.YValue;
                 MealDataPoints.Add(point);
             }
-            BloodSugarDataPoints = BloodSugarDataPoints.OrderBy(o => o.XValue).ToList();
 
-            foreach (MedicineDataPoint tmpPoint in settingsModel.MedicineDataPoints)
+
+
+            foreach (MedicineDataPoint tmpPoint in SettingsModel.MedicineDataPoints)
             {
                 ChartDataPoint point = new ChartDataPoint(tmpPoint.Date, 0);
                 point.YValue = calcDataPointsYValue(point);
@@ -91,6 +101,8 @@ namespace MobileFramework.MonitoringPlugin
                 MedDataPoints.Add(point);
             }
         }
+
+           
         public double calcDataPointsYValue(ChartDataPoint point)
         {
             List<ChartDataPoint> tmpList = new List<ChartDataPoint>(BloodSugarDataPoints);
@@ -98,7 +110,7 @@ namespace MobileFramework.MonitoringPlugin
             tmpList = tmpList.OrderBy(o => o.XValue).ToList();
             
             int index = tmpList.IndexOf(point);
-            if (index > 0)
+            if (index > 0 && tmpList.Count >2)
             {
 
                 double yValAncestor = tmpList[index - 1].YValue;
@@ -129,6 +141,17 @@ namespace MobileFramework.MonitoringPlugin
                 name = value;
                 OnPropertyChanged("Name");
             }
+        }
+
+        public int SelectedPointIndex
+        {
+            get;
+            set;
+        }
+
+        public MonitoringPluginSettingsModel SettingsModel
+        {
+            get;set;
         }
 
         public List<ChartDataPoint> BloodSugarDataPoints

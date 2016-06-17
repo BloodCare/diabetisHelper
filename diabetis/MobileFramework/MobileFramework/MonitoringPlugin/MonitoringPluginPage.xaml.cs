@@ -1,4 +1,5 @@
-﻿using MobileFramework.MonitoringPlugin.Helpers;
+﻿using MobileFramework.Model;
+using MobileFramework.MonitoringPlugin.Helpers;
 using MobileFramework.PluginManager;
 using Syncfusion.SfChart.XForms;
 using System;
@@ -45,10 +46,41 @@ namespace MobileFramework.MonitoringPlugin
             model = (MonitoringPluginPageModel)this.BindingContext;
             addDatapoints_Button.Command = AddDatapoints;
             
+            
         }
 
+        public void on_SelectedIndexChangedBs(object sender, ChartSelectionEventArgs e)
+        {
+            if( e.SelectedSeries.Label == "Bloodsugar")
+            {
 
-        void PrimaryAxis_LabelCreated(object sender, ChartAxisLabelEventArgs e)
+            }
+            if (e.SelectedSeries.Label == "Meal")
+            {
+                MealDataPoint mealPoint = model.SettingsModel.MealDataPoints[e.SelectedDataPointIndex];
+
+                string content = "";
+                    content= "Total BreadUnits: " + mealPoint.BreadUnits + "\t\t\t\t" +  "Total Energy: " + mealPoint.EnergyAmount + " kcal" + "\n\n";
+
+                foreach(Ingredient ing in mealPoint.Ingredients)
+                {
+                    content += ing.Name + "\n"
+                             + "Breadunits: " + ing.BreadUnits + "\t\t" + "Energy: " + ing.EnergyAmount + "\t\t" + "Amount: " + ing.amount + "\n\n";
+                }
+                    var action = DisplayAlert("Meal:", content, "Edit", "Back");
+                
+            }
+
+            if (e.SelectedSeries.Label == "Med")
+            {
+                MedicineDataPoint medPoint = model.SettingsModel.MedicineDataPoints[e.SelectedDataPointIndex];
+                var action = DisplayAlert("Medicine:",medPoint.Name +": " + medPoint.Amount +" "+ medPoint.Unit  , "Edit", "Back");
+            }
+
+        }
+        
+       
+        public void PrimaryAxis_LabelCreated(object sender, ChartAxisLabelEventArgs e)
         {
             DateTime date = DateTime.Parse(e.LabelContent);
 

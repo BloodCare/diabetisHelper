@@ -17,7 +17,7 @@
     
     
 
-    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0">
+    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" SelectionChanged="on_SelectedIndexChangedBs">
     
       <chart:SfChart.PrimaryAxis >
         
@@ -41,23 +41,23 @@
         </chart:NumericalAxis>
       </chart:SfChart.SecondaryAxis>
 
-      <chart:FastLineSeries ItemsSource="{Binding BloodSugarDataPoints}" >
+      <chart:FastLineSeries x:Name="bsLine" Label="Bloodsugar"  EnableDataPointSelection="True"  ItemsSource="{Binding BloodSugarDataPoints}" >
         <chart:FastLineSeries.DataMarker>
           <chart:ChartDataMarker/>
         </chart:FastLineSeries.DataMarker>
       </chart:FastLineSeries>
 
-      <chart:ScatterSeries ItemsSource="{Binding MealDataPoints}" StrokeColor="Green" Color="Green" ScatterHeight="10" ScatterWidth="10" >
+      <chart:ScatterSeries Label="Meal" EnableDataPointSelection="True"  ItemsSource="{Binding MealDataPoints}" StrokeColor="Green" Color="Green" ScatterHeight="20" ScatterWidth="20" >
         
       </chart:ScatterSeries>
 
-      <chart:ScatterSeries ItemsSource="{Binding MedDataPoints}" StrokeColor="Blue" Color="Blue" ScatterHeight="20" ScatterWidth="20" >
+      <chart:ScatterSeries Label ="Med"  EnableDataPointSelection="True" ItemsSource="{Binding MedDataPoints}" StrokeColor="Blue" Color="Blue" ScatterHeight="20" ScatterWidth="20" >
 
       </chart:ScatterSeries>
       
     </chart:SfChart>
 
-    <Button x:Name="addDatapoints_Button" Text="Add" Grid.Row="1"  HorizontalOptions="End" VerticalOptions="End" HeightRequest="50" WidthRequest="50">
+    <Button x:Name="addDatapoints_Button" Text="Add" Grid.Row="1"  HorizontalOptions="End" VerticalOptions="End" >
       
     </Button>
 
