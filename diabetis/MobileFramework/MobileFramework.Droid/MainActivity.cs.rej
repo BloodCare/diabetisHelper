@@ -1,0 +1,9 @@
+diff a/diabetis/MobileFramework/MobileFramework.Droid/MainActivity.cs b/diabetis/MobileFramework/MobileFramework.Droid/MainActivity.cs	(rejected hunks)
+@@ -35,6 +35,7 @@
+             new SfChartRenderer();
+             WireUpLongRunningTask();
+             var x = this.Intent.GetStringExtra("PluginName");
++            BloodCareDatabase.Root= System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+             LoadApplication(new App(x));
+         }
+ 
