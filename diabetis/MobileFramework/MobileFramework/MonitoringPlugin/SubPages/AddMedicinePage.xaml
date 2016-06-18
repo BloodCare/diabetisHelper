@@ -9,7 +9,7 @@
              BackgroundColor="White">
 
   <Label Text="{Binding Name}"></Label>
-  <StackLayout HorizontalOptions="CenterAndExpand">
+  <StackLayout HorizontalOptions="FillAndExpand">
     <DatePicker  Date="{Binding Date}">
       <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
     </DatePicker>
@@ -21,8 +21,8 @@
     </StackLayout>
     <StackLayout x:Name="pickerStack" Orientation="Horizontal">
       <Label Text="Amount:"></Label>
-      <Entry Keyboard="Numeric" Text="{Binding MedicineAmount}"></Entry>
-      <Picker x:Name="medPicker" SelectedIndex="{Binding MedicineUnitIndex}"></Picker>
+      <Entry WidthRequest="50"  Keyboard="Numeric" Text="{Binding MedicineAmount}"></Entry>
+      <Picker WidthRequest="50" x:Name="medPicker" SelectedIndex="{Binding MedicineUnitIndex, Mode=TwoWay}"></Picker>
     </StackLayout>
     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
       <Button Text="Cancel" ></Button>

@@ -25,6 +25,8 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         private string name;
         private string test;
         IPluginCollector pluginCollector;
+        private MealDataPoint existingPoint;
+  
         public event PropertyChangedEventHandler PropertyChanged;
 
         AddIngredientPage ingredientPage;
@@ -48,6 +50,19 @@ namespace MobileFramework.MonitoringPlugin.SubPages
             Name = "AddMeal";
             pluginCollector = _pluginCollector;
             Ingredients = new List<Ingredient>();
+        }
+
+        public AddMealPageModel(IPluginCollector _pluginCollector, MealDataPoint point)
+        {
+            Name = "AddMeal";
+            pluginCollector = _pluginCollector;
+            Ingredients = point.Ingredients;
+            Time = point.Date.TimeOfDay;
+            Date = point.Date;
+            BreadUnits = point.BreadUnits;
+            EnergyAmount = point.EnergyAmount;
+            existingPoint = point;
+
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
@@ -123,6 +138,11 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                     tmpPoint.EnergyAmount = EnergyAmount;
                     tmpPoint.Date = tmpDateTime;
                     tmpPoint.Ingredients = Ingredients;
+
+                    if(existingPoint != null)
+                    {
+                        tmpSettingsModel.MealDataPoints.Remove(existingPoint);
+                    }
                     tmpSettingsModel.MealDataPoints.Add(tmpPoint);
 
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();

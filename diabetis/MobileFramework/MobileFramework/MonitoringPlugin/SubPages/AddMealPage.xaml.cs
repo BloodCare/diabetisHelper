@@ -23,12 +23,14 @@ namespace MobileFramework.MonitoringPlugin.SubPages
             model = (AddMealPageModel)this.BindingContext;
             model.WireEvents(this);
             InitializeComponent();
-            //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
+        }
 
-
-            // var test = Activator.CreateInstance((from KeyValuePair<String, Type> tmp in PluginCollector.Instance.Plugins where tmp.Key == "AlarmPlugin" select tmp.Value).FirstOrDefault());
-
-
+        public AddMealPage(IPluginCollector pluginCollector, MealDataPoint point)
+        {
+            this.BindingContext = new AddMealPageModel(pluginCollector, point);
+            model = (AddMealPageModel)this.BindingContext;
+            model.WireEvents(this);
+            InitializeComponent();
         }
 
 

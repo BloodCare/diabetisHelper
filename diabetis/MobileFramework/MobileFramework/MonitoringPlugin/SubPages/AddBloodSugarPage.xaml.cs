@@ -23,14 +23,13 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         {
             this.BindingContext = new AddBloodSugarPageModel(pluginCollector);
             InitializeComponent();
-            //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
-
-
-            // var test = Activator.CreateInstance((from KeyValuePair<String, Type> tmp in PluginCollector.Instance.Plugins where tmp.Key == "AlarmPlugin" select tmp.Value).FirstOrDefault());
-
-
         }
 
+        public AddBloodSugarPage(IPluginCollector pluginCollector, BloodSugarDataPoint point)
+        {
+            this.BindingContext = new AddBloodSugarPageModel(pluginCollector, point);
+            InitializeComponent();
+        }
 
         /// <summary>
         /// set up the eventlistener to act when the station list in PageModel changed

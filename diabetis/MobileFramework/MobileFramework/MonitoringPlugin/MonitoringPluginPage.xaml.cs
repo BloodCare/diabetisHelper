@@ -49,37 +49,56 @@ namespace MobileFramework.MonitoringPlugin
             
         }
 
-        public void on_SelectedIndexChangedBs(object sender, ChartSelectionEventArgs e)
+        public async void on_SelectedIndexChangedBs(object sender, ChartSelectionEventArgs e)
         {
-            if( e.SelectedSeries.Label == "Bloodsugar")
+            if (e.SelectedSeries != null && e.SelectedDataPointIndex != -1)
             {
-
-            }
-            if (e.SelectedSeries.Label == "Meal")
-            {
-                MealDataPoint mealPoint = model.SettingsModel.MealDataPoints[e.SelectedDataPointIndex];
-
-                string content = "";
-                    content= "Total BreadUnits: " + mealPoint.BreadUnits + "\t\t\t\t" +  "Total Energy: " + mealPoint.EnergyAmount + " kcal" + "\n\n";
-
-                foreach(Ingredient ing in mealPoint.Ingredients)
+                if (e.SelectedSeries.Label == "Bloodsugar")
                 {
-                    content += ing.Name + "\n"
-                             + "Breadunits: " + ing.BreadUnits + "\t\t" + "Energy: " + ing.EnergyAmount + "\t\t" + "Amount: " + ing.amount + "\n\n";
+                    BloodSugarDataPoint bloodPoint = model.SettingsModel.BloodSugarDataPoints[e.SelectedDataPointIndex];
+                    bool action = await DisplayAlert("BloodSugar:", bloodPoint.BloodSugarLevel.ToString(), "Edit", "Back");
+
+                    if (action == true)
+                    {
+                        openDataPoint(e.SelectedDataPointIndex, DataPoints.BloodSugar.ToString());
+                    }
                 }
-                    var action = DisplayAlert("Meal:", content, "Edit", "Back");
-                
-            }
+                if (e.SelectedSeries.Label == "Meal")
+                {
+                    MealDataPoint mealPoint = model.SettingsModel.MealDataPoints[e.SelectedDataPointIndex];
 
-            if (e.SelectedSeries.Label == "Med")
-            {
-                MedicineDataPoint medPoint = model.SettingsModel.MedicineDataPoints[e.SelectedDataPointIndex];
-                var action = DisplayAlert("Medicine:",medPoint.Name +": " + medPoint.Amount +" "+ medPoint.Unit  , "Edit", "Back");
-            }
+                    string content = "";
+                    content = "Total BreadUnits: " + mealPoint.BreadUnits + "\t\t\t\t" + "Total Energy: " + mealPoint.EnergyAmount + " kcal" + "\n\n";
 
+                    foreach (Ingredient ing in mealPoint.Ingredients)
+                    {
+                        content += ing.Name + "\n"
+                                 + "Breadunits: " + ing.BreadUnits + "\t\t" + "Energy: " + ing.EnergyAmount + "\t\t" + "Amount: " + ing.amount + "\n\n";
+                    }
+                    var action = await DisplayAlert("Meal:", content, "Edit", "Back");
+
+                    if (action == true)
+                    {
+                        openDataPoint(e.SelectedDataPointIndex, DataPoints.Meal.ToString());
+                    }
+
+                }
+
+                if (e.SelectedSeries.Label == "Med")
+                {
+                    MedicineDataPoint medPoint = model.SettingsModel.MedicineDataPoints[e.SelectedDataPointIndex];
+                    var action = await DisplayAlert("Medicine:", medPoint.Name + ": " + medPoint.Amount + " " + medPoint.Unit, "Edit", "Back");
+
+                    if (action == true)
+                    {
+                        openDataPoint(e.SelectedDataPointIndex, DataPoints.Medicine.ToString());
+                    }
+
+                }
+            }
         }
-        
-       
+
+
         public void PrimaryAxis_LabelCreated(object sender, ChartAxisLabelEventArgs e)
         {
             DateTime date = DateTime.Parse(e.LabelContent);
@@ -118,6 +137,22 @@ namespace MobileFramework.MonitoringPlugin
                     }
 
                 });
+            }
+        }
+
+        private void openDataPoint(int index, string action)
+        {
+            if (action == DataPoints.BloodSugar.ToString())
+            {
+                model.OpenDataPoints(index, DataPoints.BloodSugar);
+            }
+            else if (action == DataPoints.Meal.ToString())
+            {
+                model.OpenDataPoints(index, DataPoints.Meal);
+            }
+            else if (action == DataPoints.Medicine.ToString())
+            {
+                model.OpenDataPoints(index, DataPoints.Medicine);
             }
         }
 

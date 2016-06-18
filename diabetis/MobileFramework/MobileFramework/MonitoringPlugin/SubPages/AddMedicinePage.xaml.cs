@@ -23,12 +23,12 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         {
             this.BindingContext = new AddMedicinePageModel(pluginCollector);
             InitializeComponent();
-            //chart.PrimaryAxis.LabelCreated += PrimaryAxis_LabelCreated;
+        }
 
-
-            // var test = Activator.CreateInstance((from KeyValuePair<String, Type> tmp in PluginCollector.Instance.Plugins where tmp.Key == "AlarmPlugin" select tmp.Value).FirstOrDefault());
-
-
+        public AddMedicinePage(IPluginCollector pluginCollector, MedicineDataPoint point)
+        {
+            this.BindingContext = new AddMedicinePageModel(pluginCollector, point);
+            InitializeComponent();
         }
 
 

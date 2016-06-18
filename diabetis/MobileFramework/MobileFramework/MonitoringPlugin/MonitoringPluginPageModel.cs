@@ -192,5 +192,27 @@ namespace MobileFramework.MonitoringPlugin
             }
         }
 
+        public async void OpenDataPoints(int index, DataPoints point)
+        {
+            FreshMasterDetailNavigation nav = App.GetNavigationContainer();
+            switch (point)
+            {
+                case DataPoints.BloodSugar:
+                   
+
+                    await nav.PushPage(new AddBloodSugarPage(pluginCollector, SettingsModel.BloodSugarDataPoints[index]), null, false, true);
+                    //CoreMethods.PushPageModel<AddBloodSugarPageModel>(null, true);
+                    break;
+
+                case DataPoints.Meal:
+                    await nav.PushPage(new AddMealPage(pluginCollector, SettingsModel.MealDataPoints[index]), null, false, true);
+                    break;
+
+                case DataPoints.Medicine:
+                    await nav.PushPage(new AddMedicinePage(pluginCollector, SettingsModel.MedicineDataPoints[index]), null, false, true);
+                    break;
+            }
+        }
+
     }
 }

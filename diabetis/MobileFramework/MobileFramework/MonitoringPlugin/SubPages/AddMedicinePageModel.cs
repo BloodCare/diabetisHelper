@@ -24,6 +24,8 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         private string name;
         private string test;
         IPluginCollector pluginCollector;
+        private MedicineDataPoint existingPoint;
+
         public event PropertyChangedEventHandler PropertyChanged;
         public virtual void OnPropertyChanged(string propertyName)
         {
@@ -43,6 +45,21 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         {
             Name = "AddMedicine";
             pluginCollector = _pluginCollector;
+            MedicineUnits = Enum.GetNames(typeof(MedicineUnits)).ToList();
+        }
+
+        public AddMedicinePageModel(IPluginCollector _pluginCollector, MedicineDataPoint point)
+        {
+            Name = "AddMedicine";
+            pluginCollector = _pluginCollector;
+            Time = point.Date.TimeOfDay;
+            Date = point.Date;
+            MedicineUnits = Enum.GetNames(typeof(MedicineUnits)).ToList();
+            MedicineUnitIndex = MedicineUnits.ToList().IndexOf(point.Unit);
+            MedicineAmount = point.Amount;
+            MedicineName = point.Name;
+            existingPoint = point;
+           
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
@@ -72,9 +89,12 @@ namespace MobileFramework.MonitoringPlugin.SubPages
 
         public void preSetFields()
         {
-            Time = DateTime.Now.TimeOfDay;
-            Date = DateTime.Now;
-            MedicineUnits = Enum.GetNames(typeof(MedicineUnits)).ToList();
+            if (Time.Days + Time.Hours + Time.Minutes == 0 && Date == new DateTime(1900, 1, 1))
+            {
+                Time = DateTime.Now.TimeOfDay;
+                Date = DateTime.Now;
+            }
+            
         }
 
         public List<string> MedicineUnits { get; set; }
@@ -102,6 +122,12 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                     tmpPoint.Amount = MedicineAmount;
                     tmpPoint.Unit = MedicineUnits[MedicineUnitIndex];
                     tmpPoint.Date = tmpDateTime;
+
+                    if(existingPoint != null)
+                    {
+                        tmpSettingsModel.MedicineDataPoints.Remove(existingPoint);
+                    }
+
                     tmpSettingsModel.MedicineDataPoints.Add(tmpPoint);
 
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();

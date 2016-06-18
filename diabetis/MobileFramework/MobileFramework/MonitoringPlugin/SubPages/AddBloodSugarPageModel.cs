@@ -24,6 +24,7 @@ namespace MobileFramework.MonitoringPlugin.SubPages
         private string name;
         private string test;
         IPluginCollector pluginCollector;
+        private BloodSugarDataPoint existingPoint;
         public event PropertyChangedEventHandler PropertyChanged;
         public virtual void OnPropertyChanged(string propertyName)
         {
@@ -44,6 +45,16 @@ namespace MobileFramework.MonitoringPlugin.SubPages
             Name = "AddBloodSugar";
             pluginCollector = _pluginCollector;
         }
+        public AddBloodSugarPageModel(IPluginCollector _pluginCollector, BloodSugarDataPoint point)
+        {
+            Name = "AddBloodSugar";
+            pluginCollector = _pluginCollector;
+            Time = point.Date.TimeOfDay;
+            Date = point.Date;
+            BloodSugarValue = point.BloodSugarLevel;
+            existingPoint = point;
+        }
+
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)
         {
@@ -72,8 +83,11 @@ namespace MobileFramework.MonitoringPlugin.SubPages
 
         public void preSetFields()
         {
-            Time = DateTime.Now.TimeOfDay;
-            Date = DateTime.Now;
+            if (Time.Days + Time.Hours + Time.Minutes == 0 && Date == new DateTime(1900, 1, 1))
+            {
+                Time = DateTime.Now.TimeOfDay;
+                Date = DateTime.Now;
+            }
         }
 
         public double BloodSugarValue { get; set; }
@@ -90,11 +104,16 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                 return new Command(() =>
                 {
                    MonitoringPluginSettingsModel tmpSettingsModel =  (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
+                    
                     BloodSugarDataPoint tmpPoint = new BloodSugarDataPoint();
                     DateTime tmpDateTime = new DateTime(Date.Year, Date.Month, Date.Day, Time.Hours, Time.Minutes, Time.Seconds);
                     tmpPoint.BloodSugarLevel = BloodSugarValue;
                     tmpPoint.Date = tmpDateTime;
 
+                    if (existingPoint != null)
+                    {
+                        tmpSettingsModel.BloodSugarDataPoints.Remove(existingPoint);
+                    }
                     tmpSettingsModel.BloodSugarDataPoints.Add(tmpPoint);
 
                     FreshMasterDetailNavigation nav = App.GetNavigationContainer();
