@@ -64,6 +64,14 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                 tmpList.AddRange(Ingredients);
                 tmpList.Add(ingredientPageModel.Ingredient);
                 Ingredients = tmpList;
+
+                BreadUnits = 0;
+                EnergyAmount = 0;
+                foreach (Ingredient ing in Ingredients)
+                {
+                    BreadUnits = BreadUnits + ing.BreadUnits;
+                    EnergyAmount = EnergyAmount + ing.EnergyAmount;
+                }
             }
         }
 
@@ -83,8 +91,11 @@ namespace MobileFramework.MonitoringPlugin.SubPages
 
         public void preSetFields()
         {
-            Time = DateTime.Now.TimeOfDay;
-            Date = DateTime.Now;
+            if (Time.Days +Time.Hours + Time.Minutes == 0  && Date == new DateTime(1900,1,1 ))
+            {
+                Time = DateTime.Now.TimeOfDay;
+                Date = DateTime.Now;
+            }
         }
 
         public double BreadUnits { get; set; }
@@ -107,6 +118,7 @@ namespace MobileFramework.MonitoringPlugin.SubPages
                    MonitoringPluginSettingsModel tmpSettingsModel =  (MonitoringPluginSettingsModel) pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MonitoringPluginName).Select(x => x.Value).FirstOrDefault();
                     MealDataPoint tmpPoint = new MealDataPoint();
                     DateTime tmpDateTime = new DateTime(Date.Year, Date.Month, Date.Day, Time.Hours, Time.Minutes, Time.Seconds);
+                    
                     tmpPoint.BreadUnits = BreadUnits;
                     tmpPoint.EnergyAmount = EnergyAmount;
                     tmpPoint.Date = tmpDateTime;

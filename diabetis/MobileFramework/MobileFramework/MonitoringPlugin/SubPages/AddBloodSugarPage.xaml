@@ -17,7 +17,7 @@
     </TimePicker>
     <StackLayout Orientation="Horizontal">
       <Label HorizontalOptions="Start"  Text="BloodSugar Value:"></Label>
-      <Entry WidthRequest="50"  Keyboard="Numeric" Text="{Binding BloodSugarValue}"></Entry>
+      <Entry WidthRequest="100"  Keyboard="Numeric" Text="{Binding BloodSugarValue}"></Entry>
     </StackLayout>
     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
       <Button Text="Cancel" ></Button>
