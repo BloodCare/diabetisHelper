@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-
+using MobileFramework.Database;
 namespace MobileFramework.ReminderPlugin
 {
     public class ReminderDataService : IReminderDataService
     {
         private static List<Reminder> _reminderList;
         private static ReminderDataService _reminderDataServ;
+        private BloodCareDatabase _bloodCareDatabase;
 
         private ReminderDataService()
         {
             _reminderList = new List<Reminder>();
+            _bloodCareDatabase = new BloodCareDatabase();
             this.Initilize();
         }
         public void Initilize()
@@ -20,10 +22,12 @@ namespace MobileFramework.ReminderPlugin
         }
         void LoadReminders()
         {
-            AddReminder(new Reminder { Name = "Blood Sugar", Description = "Any description can be there", isActive = false });
-            AddReminder(new Reminder { Name = "Medicine", Description = "Any description can be there", isActive = true });
-            AddReminder(new Reminder { Name = "Emergency", Description = "Any description can be there", isActive = true });
-            AddReminder(new Reminder { Name = "Physical", Description = "Any description can be there", isActive = false });
+            _reminderList.Clear();
+            foreach (var item in _bloodCareDatabase.GetItems<Reminder>())
+            {
+                _reminderList.Add(item);
+            }
+           
         }
 
 
@@ -40,7 +44,8 @@ namespace MobileFramework.ReminderPlugin
 
         public bool AddReminder(Reminder reminder)
         {
-            _reminderList.Add(reminder);
+            _bloodCareDatabase.SaveItem(reminder);
+            LoadReminders();
             return true;
         }
 
@@ -54,7 +59,8 @@ namespace MobileFramework.ReminderPlugin
 
         public bool RemoveReminder(Reminder reminder)
         {
-            _reminderList.Remove(reminder);
+            _bloodCareDatabase.DeleteItem(reminder);
+            LoadReminders();
             return true;
 
         }

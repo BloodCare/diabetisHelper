@@ -15,7 +15,7 @@ using MobileFramework.Droid.Services;
 using MobileFramework.Helpers.Messages;
 using MobileFramework.Model;
 using Syncfusion.SfChart.XForms.Droid;
-
+using MobileFramework.Database;
 namespace MobileFramework.Droid
 {
     [Activity(Label = "MobileFramework", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -35,6 +35,7 @@ namespace MobileFramework.Droid
             new SfChartRenderer();
             WireUpLongRunningTask();
             var x = this.Intent.GetStringExtra("PluginName");
+            BloodCareDatabase.Root= System.Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
             LoadApplication(new App(x));
         }
 
