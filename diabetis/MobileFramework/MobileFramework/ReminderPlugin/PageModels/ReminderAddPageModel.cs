@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using Xamarin.Forms;
-using MobileFramework.PluginManager;
 using System.Diagnostics;
 using FreshMvvm;
-using System.Windows.Input;
-using MobileFramework.Helpers.Services;
+using Acr.UserDialogs;
 
 namespace MobileFramework.ReminderPlugin
 {
@@ -14,21 +11,24 @@ namespace MobileFramework.ReminderPlugin
 	{
 
 		String _rName = string.Empty;
-		string _prName = string.Empty;
 		String _rDescription = string.Empty;
 		String _selFeature = string.Empty;
 		public List<string> featureList = new List<string>();
-		DateTime _Date = DateTime.Now;
+		DateTime _Date;
 		TimeSpan _Time;
 		DateTime _rDateTime;
 		string pluginName = "ReminderPlugin";
 		Reminder _newReminder;
 		ReminderDataService rds;
+		IUserDialogs _userDialog;
 
 
-		public ReminderAddPageModel()
+		public ReminderAddPageModel(IUserDialogs userDialogs)
 		{
 			rds = ReminderDataService.ReminderDataServ;
+			_userDialog =  userDialogs;
+			_Date = DateTime.Now;
+			_Time = _Date - _Date.Date;
 		}
 
 
@@ -38,8 +38,8 @@ namespace MobileFramework.ReminderPlugin
 			set
 			{
 				_rName = value;
-				if (_rName.Length > 25)
-					_rName = value.Substring(0, 25);
+				if (_rName.Length > 40)
+					_rName = value.Substring(0, 40);
 				//_rName = value;
 				Debug.WriteLine(_rName);
 			}
@@ -69,8 +69,8 @@ namespace MobileFramework.ReminderPlugin
 			set
 			{
 				_rDescription = value;
-				if (_rDescription.Length > 50)
-					_rDescription = value.Substring(0, 50);
+				if (_rDescription.Length > 150)
+					_rDescription = value.Substring(0, 150);
 			}
 		}
 
@@ -99,8 +99,10 @@ namespace MobileFramework.ReminderPlugin
 		//presetting the picker time and date
 		public void preSetFields()
 		{
-			_Time = DateTime.Now.TimeOfDay;
+			//_Time = DateTime.Now.TimeOfDay;
+
 			_Date = DateTime.Now;
+			_Time = _Date - _Date.Date;
 		}
 
 
@@ -114,11 +116,22 @@ namespace MobileFramework.ReminderPlugin
 				   {
 
 					   var reminder = CreateNewReminder();
-					   rds.AddReminder(reminder);
+					   
+						//Constructing a dateTime variable for user selected date and times
 					   _rDateTime = new DateTime(_Date.Year, _Date.Month, _Date.Day, _Time.Hours, _Time.Minutes, _Time.Seconds);
-					   setreminder(_rName, _rDescription, _rDateTime);
-					   CoreMethods.PopToRoot(true);
-
+					   _selFeature = featureList[_index];
+					   //if clause with isvalidateDateTime method to notify the user with toast and stay on screen,
+					   // else let it save and poptoroot
+					   if (isvalidateDateTime(_rDateTime))
+					    // _userDialog.ShowError("Please choose proper Date and Time", 2000);
+						_userDialog.ErrorToast("Please choose proper Date and Time", null, 2000);
+					else {
+							_userDialog.ShowSuccess("Reminder Added", 2000);
+						//_userDialog.SuccessToast("Reminder Added", null, 2000);
+							rds.AddReminder(reminder);
+						   	setreminder(_rName, _rDescription, _selFeature, _rDateTime);
+						   	CoreMethods.PopToRoot(true);
+					}
 
 				   });
 			}
@@ -136,16 +149,27 @@ namespace MobileFramework.ReminderPlugin
 			}
 		}
 
-		// TODO: complete this method for setting local notifications
-		public void setreminder(string name, string description, DateTime datetime)
+		// To check whether user selected date time are in future.
+		public bool isvalidateDateTime(DateTime dt) {
+
+			var _dt = dt;
+			if (_dt < _Date)
+				return true;
+			else
+				return false;
+		}
+
+
+		// method for setting local notifications
+		public void setreminder(string name, string description, string feature, DateTime datetime)
 		{
 
-			var remiderService = DependencyService.Get<ILocalNotifications>();
+			//var remiderService = DependencyService.Get<ILocalNotifications>();
 			var reminderService2 = DependencyService.Get<IReminderService>();
 
 			// send user set date and time in the function.
 			//remiderService.SendReminderNotification(name, description,datetime, pluginName );
-			reminderService2.RemindNormal(datetime, name, description);
+			reminderService2.RemindNormal(datetime, name, description, feature);
 		}
 
 	}

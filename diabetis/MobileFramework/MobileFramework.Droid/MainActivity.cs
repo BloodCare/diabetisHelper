@@ -16,6 +16,8 @@ using MobileFramework.Helpers.Messages;
 using MobileFramework.Model;
 using Syncfusion.SfChart.XForms.Droid;
 using MobileFramework.Database;
+using Acr.UserDialogs;
+
 namespace MobileFramework.Droid
 {
     [Activity(Label = "MobileFramework", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -31,6 +33,7 @@ namespace MobileFramework.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            UserDialogs.Init(this);
             Forms.Init(this, bundle);
             new SfChartRenderer();
             WireUpLongRunningTask();

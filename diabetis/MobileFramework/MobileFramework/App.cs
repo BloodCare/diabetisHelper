@@ -7,6 +7,7 @@ using MobileFramework.OverviewPlugin;
 using MobileFramework.PluginManager;
 using Xamarin.Forms;
 using MobileFramework.ReminderPlugin;
+using Acr.UserDialogs;
 
 namespace MobileFramework
 {
@@ -21,8 +22,8 @@ namespace MobileFramework
         {
             //register PluginCollector in IoC container for constructorinjection
             FreshIOC.Container.Register<IPluginCollector, PluginCollector>();
-
-            masterDetailNav = new FreshMasterDetailNavigation();
+			FreshIOC.Container.Register<IUserDialogs> (UserDialogs.Instance);
+	        masterDetailNav = new FreshMasterDetailNavigation();
             masterDetailNav.Init("Menu");
 
             //every Plugin has to be added like these

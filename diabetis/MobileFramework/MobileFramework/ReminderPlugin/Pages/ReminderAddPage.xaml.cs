@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using MobileFramework.PluginManager;
 using System.Diagnostics;
+using Acr.UserDialogs;
 
 namespace MobileFramework.ReminderPlugin
 {
@@ -12,22 +13,26 @@ namespace MobileFramework.ReminderPlugin
 
 		private List<String> fplist;
 		ReminderAddPageModel model;
+		IUserDialogs userDialogs;
 
-		public ReminderAddPage ()
+		public ReminderAddPage()
 		{
-			InitializeComponent ();
-			this.BindingContext = new ReminderAddPageModel ();
+			InitializeComponent();
+			this.BindingContext = new ReminderAddPageModel(userDialogs);
+			btnRingtoneSelect.Clicked += (sender, e) =>
+			{
 
+				DependencyService.Get<IAndroidRingtoneSelector>().startRingtonePicker();
+			};
 		}
 
 
 
-		protected  override void OnAppearing()
+		protected override void OnAppearing()
 		{
 			model = (ReminderAddPageModel)this.BindingContext;
 			fplist = new List<string>(FeaturePicker.Items);
-			model.featureList = (List<String>) fplist;
-			model.preSetFields ();
+			model.featureList = (List<String>)fplist;
 		}
 
 

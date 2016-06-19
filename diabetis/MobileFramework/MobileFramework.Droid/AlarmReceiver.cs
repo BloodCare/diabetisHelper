@@ -14,6 +14,7 @@ namespace MobileFramework.Droid
 
 			var message = intent.GetStringExtra("message");
 			var title = intent.GetStringExtra("title");
+			var feature = intent.GetStringExtra("feature");
 
 			var notIntent = new Intent(context, typeof(MainActivity));
 			var contentIntent = PendingIntent.GetActivity(context, 0, notIntent, PendingIntentFlags.UpdateCurrent);
@@ -21,16 +22,26 @@ namespace MobileFramework.Droid
 
 			var manager = (NotificationManager)context.GetSystemService(Context.NotificationService) as NotificationManager;
 
+			// Instantiate the Big Text style:
+			Notification.BigTextStyle textStyle = new Notification.BigTextStyle();
+
+			// Message to Display
+			textStyle.BigText(message);
+
+			// Set the summary text as feature label
+			textStyle.SetSummaryText(feature);
+
 
 			// Instantiate the builder and set notification elements:
 			Notification.Builder builder = new Notification.Builder(Android.App.Application.Context)
 				.SetContentIntent(contentIntent)
 				.SetContentTitle(title)
-				.SetContentText(message)
+				//.SetContentText(message)
 				.SetSmallIcon(Resource.Drawable.icon)
 				.SetDefaults(NotificationDefaults.Sound)
 				.SetShowWhen(true)
-				.SetAutoCancel(true);
+				.SetAutoCancel(true)
+				.SetStyle(textStyle);
 
 
 			// Build the notification:

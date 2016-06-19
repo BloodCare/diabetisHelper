@@ -2,32 +2,48 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
+xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
 x:Class="MobileFramework.ReminderPlugin.ReminderAddPage"
-Padding="20">
+Padding="20"
+Title="Add Reminder">
 <ContentPage.Content>
 <StackLayout>                
 	<Entry Placeholder="Name" Text="{Binding Name}"/>
- 	<Entry Placeholder="Description(Max 50 characters)" Text="{Binding Description}" WidthRequest="200" HeightRequest="100"/>
- 	<Picker x:Name="FeaturePicker" SelectedIndex="{Binding SelectIndex}"  HorizontalOptions="FillAndExpand">
+ 	<Entry Placeholder="Description(Max 150 characters)" Text="{Binding Description}" WidthRequest="200" HeightRequest="50"/>
+ 	<Picker x:Name="FeaturePicker" Title="Link with Feature" SelectedIndex="{Binding SelectIndex}"  HorizontalOptions="FillAndExpand">
         <Picker.Items>
-             <x:String>link to feature</x:String> 
+           <!--  <x:String>link to feature</x:String> -->
             <x:String>Monitoring</x:String> 
             <x:String>Diet Planner</x:String>
         </Picker.Items>
         <Picker.SelectedIndex>0</Picker.SelectedIndex>
     </Picker>
-    <Picker x:Name="SoundPicker" HorizontalOptions="FillAndExpand">
-        <Picker.Items>
-         <x:String>Sound</x:String>
-            <x:String>Jazz</x:String> 
-            <x:String>Buletin</x:String>
-        </Picker.Items>
-        <Picker.SelectedIndex>0</Picker.SelectedIndex>
-    </Picker> 
-    <DatePicker Date ="{Binding Date}" Format="D">
+    <Button x:Name="btnRingtoneSelect" Text="Select Tone" WidthRequest="200"/>	
+    <Grid>
+  		<Grid.RowDefinitions>
+    	<RowDefinition Height="40" />
+		<RowDefinition Height="40"/>
+  		</Grid.RowDefinitions>
+  		<Grid.ColumnDefinitions>
+    	<ColumnDefinition Width="65" />
+    	<ColumnDefinition Width="65" />
+		<ColumnDefinition Width="65" />
+		<ColumnDefinition Width="65" />
+  		</Grid.ColumnDefinitions>
+ 	 <controls:CheckBox DefaultText="MO" Grid.Row="0" Grid.Column="0" />
+ 	 <controls:CheckBox DefaultText="TUE" Grid.Row="0" Grid.Column="1" />
+ 	 <controls:CheckBox DefaultText="WE" Grid.Row="0" Grid.Column="2" />
+  	 <controls:CheckBox DefaultText="THU" Grid.Row="0" Grid.Column="3" />
+	 <controls:CheckBox DefaultText="FRI" Grid.Row="1" Grid.Column="0" />
+ 	 <controls:CheckBox DefaultText="SAT" Grid.Row="1" Grid.Column="1" />
+  	 <controls:CheckBox DefaultText="SUN" Grid.Row="1" Grid.Column="2"/>
+	  <controls:CheckBox DefaultText="ALL" Grid.Row="1" Grid.Column="3"/>
+	</Grid>
+	<DatePicker Date ="{Binding Date}" Format="D">
      	<DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
     </DatePicker>
-    <TimePicker Time ="{Binding Time}" Format="T"/>
+    <TimePicker Time ="{Binding Time,Mode=TwoWay}" Format="HH:mm"/>
    <StackLayout Orientation="Horizontal">
    		<Button x:Name="btnSaveReminder" Command="{Binding saveReminder}" Text="Save" TextColor="White" BackgroundColor="Green" WidthRequest="100" />
   		<Button x:Name="btnCancelReminder" Command="{Binding cancelReminder}" Text="Cancel" TextColor="White" BackgroundColor="Gray" WidthRequest="100" />
@@ -35,3 +51,49 @@ Padding="20">
  </StackLayout>
  </ContentPage.Content>
 </ContentPage>
+
+			<!--<Grid>
+				<Grid.RowDefinitions>
+				<RowDefinition Height="30"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinitions>
+					<ColumnDefinition Width="100"/>
+					<ColumnDefinition Width="50" />
+					</ColumnDefinitions>
+				</Grid.ColumnDefinitions>
+		<Label Text="Repeat Every Day" Grid.Row="0" Grid.Column="0"/>
+		<controls:CheckBox DefaultText="Default text" Grid.Row="0" Grid.Column="1"/>
+		</Grid>-->
+	<!--<ListView x:Name="ListView">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.View>
+							<controls:CheckBox DefaultText="{Binding}" CheckedText="{Binding}" UncheckedText="{Binding}" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="25" />
+						</ViewCell.View>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+	</ListView>-->
+	<!--<StackLayout Spacing="5">
+    		<fe:SegmentedButtonGroup OnColor="Blue" OffColor="White"  >
+    			<fe:SegmentedButtonGroup.SegmentedButtons>
+    				<fe:SegmentedButton Title="SUN"/>
+    				<fe:SegmentedButton Title="MON"/>
+    				<fe:SegmentedButton Title="TUE"/>
+    			</fe:SegmentedButtonGroup.SegmentedButtons>
+    		</fe:SegmentedButtonGroup>
+    		<Label Text="{Binding SelectIndex, StringFormat='You select {0} Day'}" HorizontalTextAlignment="Center"/>
+    	</StackLayout>-->
+
+    <!--<Picker x:Name="SoundPicker" HorizontalOptions="FillAndExpand">
+        <Picker.Items>
+         <x:String>Sound</x:String>
+            <x:String>Jazz</x:String> 
+            <x:String>Buletin</x:String>
+        </Picker.Items>
+        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+    </Picker> -->
+	<!--<Button x:Name="btnRingtoneSelect" Text="Select Tone" WidthRequest="200"/>-->
+    

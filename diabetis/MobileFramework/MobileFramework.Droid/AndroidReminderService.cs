@@ -51,12 +51,13 @@ namespace MobileFramework.Droid
 
 		}
 
-		public void RemindNormal(DateTime dateTime, string title, string message)
+		public void RemindNormal(DateTime dateTime, string title, string message, string feature)
 		{
 			var context = Xamarin.Forms.Forms.Context;
 			Intent alarmIntent = new Intent(Forms.Context, typeof(AlarmReceiver));
 			alarmIntent.PutExtra("message", message);
 			alarmIntent.PutExtra("title", title);
+			alarmIntent.PutExtra("feature", feature);
 
 			// can use this long to set alarm time.
 			long x = dateTime.ToAndroidTimestamp();
