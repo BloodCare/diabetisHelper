@@ -97,8 +97,6 @@ namespace MobileFramework.ReminderPlugin
 		//presetting the picker time and date
 		public void preSetFields()
 		{
-			//_Time = DateTime.Now.TimeOfDay;
-
 			_Date = DateTime.Now;
 			_Time = _Date - _Date.Date;
 		}
@@ -118,18 +116,17 @@ namespace MobileFramework.ReminderPlugin
 						//Constructing a dateTime variable for user selected date and times
 					   _rDateTime = new DateTime(_Date.Year, _Date.Month, _Date.Day, _Time.Hours, _Time.Minutes, _Time.Seconds);
 					   _selFeature = featureList[_index];
-					   //if clause with isvalidateDateTime method to notify the user with toast and stay on screen,
-					   // else let it save and poptoroot
+					  
 					   if (isvalidateDateTime(_rDateTime))
 					    // _userDialog.ShowError("Please choose proper Date and Time", 2000);
 						_userDialog.ErrorToast("Please choose proper Date and Time", null, 2000);
-					else {
+						else {
 							_userDialog.ShowSuccess("Reminder Added", 2000);
 						//_userDialog.SuccessToast("Reminder Added", null, 2000);
 							rds.AddReminder(reminder);
 						   	setreminder(_rName, _rDescription, _selFeature, _rDateTime);
 						   	CoreMethods.PopToRoot(true);
-					}
+						}
 
 				   });
 			}
@@ -162,9 +159,10 @@ namespace MobileFramework.ReminderPlugin
 		// method for setting local notifications
 		public void setreminder(string name, string description, string feature, DateTime datetime)
 		{
-			var reminderService2 = DependencyService.Get<IReminderService>();
+			var reminderService = DependencyService.Get<IReminderService>();
+
 			// send user set date and time in the function.
-			reminderService2.RemindNormal(datetime, name, description, feature);
+			reminderService.RemindNormal(datetime, name, description, feature);
 		}
 
 	}
