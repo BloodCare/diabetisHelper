@@ -40,8 +40,6 @@ namespace MobileFramework.ReminderPlugin
 				_rName = value;
 				if (_rName.Length > 40)
 					_rName = value.Substring(0, 40);
-				//_rName = value;
-				Debug.WriteLine(_rName);
 			}
 		}
 
@@ -153,7 +151,8 @@ namespace MobileFramework.ReminderPlugin
 		public bool isvalidateDateTime(DateTime dt) {
 
 			var _dt = dt;
-			if (_dt < _Date)
+			var chkDt = DateTime.Now;
+			if (_dt < chkDt)
 				return true;
 			else
 				return false;
@@ -163,12 +162,8 @@ namespace MobileFramework.ReminderPlugin
 		// method for setting local notifications
 		public void setreminder(string name, string description, string feature, DateTime datetime)
 		{
-
-			//var remiderService = DependencyService.Get<ILocalNotifications>();
 			var reminderService2 = DependencyService.Get<IReminderService>();
-
 			// send user set date and time in the function.
-			//remiderService.SendReminderNotification(name, description,datetime, pluginName );
 			reminderService2.RemindNormal(datetime, name, description, feature);
 		}
 
