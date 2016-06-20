@@ -4,13 +4,13 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
 xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
 xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
-x:Class="MobileFramework.ReminderPlugin.ReminderAddPage"
+x:Class="MobileFramework.ReminderPlugin.ReminderEditPage"
 Padding="20"
-Title="Add Reminder">
+Title="Edit Reminder">
 <ContentPage.Content>
 <StackLayout>                
-	<Entry Placeholder="Name" Text="{Binding Name}"/>
- 	<Entry Placeholder="Description(Max 150 characters)" Text="{Binding Description}" WidthRequest="200" HeightRequest="50"/>
+	<Entry Placeholder="Name" Text="{Binding Reminder.Name}"/>
+ 	<Entry Placeholder="Description(Max 150 characters)" Text="{Binding Reminder.Description}" WidthRequest="200" HeightRequest="50"/>
  	<Picker x:Name="FeaturePicker" Title="Link with Feature" SelectedIndex="{Binding SelectIndex}"  HorizontalOptions="FillAndExpand">
         <Picker.Items>
            <!--  <x:String>link to feature</x:String> -->

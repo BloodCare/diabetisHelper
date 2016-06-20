@@ -32,39 +32,6 @@ C:\Users\Marc-\Source\Workspaces\OneShot2\MobileFramework\MobileFramework\obj\De
 C:\Users\Marc-\Source\Workspaces\OneShot2\MobileFramework\MobileFramework\obj\Debug\MobileFramework.csprojResolveAssemblyReference.cache
 C:\Users\Marc-\Source\Workspaces\OneShot2\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
 C:\Users\Marc-\Source\Workspaces\OneShot2\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.pdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\FreshIOC.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\FreshMvvm.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\ModernHttpClient.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Newtonsoft.Json.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Syncfusion.SfChart.XForms.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Core.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Platform.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Insights.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Newtonsoft.Json.xml
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Core.pdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Core.xml
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Platform.pdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.pdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.xml
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Insights.xml
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.xml
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MainView.MainPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.ReminderPluginPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderListPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderAddPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderToCalenderPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.Navigation.NavigationPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.OverviewPlugin.OverviewPluginPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.MonitoringPluginPage.xaml.g.cs
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.pdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
 E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll
 E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.pdb
 E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\FreshIOC.dll
@@ -175,3 +142,62 @@ C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFram
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.csprojResolveAssemblyReference.cache
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
 C:\Users\Chantal\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Acr.UserDialogs.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Acr.UserDialogs.Interface.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\ExifLib.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\FreshIOC.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\ModernHttpClient.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Newtonsoft.Json.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Splat.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLite-net.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLitePCL.batteries.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLitePCL.raw.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Syncfusion.SfChart.XForms.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Core.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Platform.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Insights.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Core.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Forms.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Ioc.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Platform.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Serialization.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Newtonsoft.Json.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Core.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Core.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Platform.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Xamarin.Insights.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\PropertyChanged.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Ioc.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Core.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Platform.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Serialization.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Forms.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Acr.UserDialogs.Interface.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLite-net.xml
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MainView.MainPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.ReminderPluginPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderListPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderAddPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderToCalenderPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.Navigation.NavigationPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.OverviewPlugin.OverviewPluginPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.MonitoringPluginPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddBloodSugarPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddMealPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddIngredientPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.MonitoringPlugin.SubPages.AddMedicinePage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.pdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.csprojResolveAssemblyReference.cache
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderEditPage.xaml.g.cs
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
+E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb

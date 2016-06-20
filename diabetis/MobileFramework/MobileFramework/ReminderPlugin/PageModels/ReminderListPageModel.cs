@@ -41,7 +41,7 @@ namespace MobileFramework.ReminderPlugin
             get { return null; }
             set
             {
-                CoreMethods.PushPageModel<ReminderPageModel>(value);
+                CoreMethods.PushPageModel<ReminderEditPageModel>(value);
                 RaisePropertyChanged();
             }
         }

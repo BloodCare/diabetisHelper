@@ -32,7 +32,7 @@
       </ListView>
       <StackLayout Orientation="Horizontal">
         <Button x:Name="btnAddReminder" Command="{Binding AddReminder}" Text="Add Reminder" />
-        <Button x:Name="btnAddReminderToCalender" Command="{Binding AddReminderToCalender}" Text="Add Appointment To Calander" />
+        <Button x:Name="btnAddReminderToCalender" Command="{Binding AddReminderToCalender}" Text="Add To Calander" />
         <Button Text="Add Emergency Reminder" />
       </StackLayout>
     </StackLayout>
