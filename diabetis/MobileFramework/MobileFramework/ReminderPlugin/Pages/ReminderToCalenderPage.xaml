@@ -3,7 +3,8 @@
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 x:Class="MobileFramework.ReminderPlugin.ReminderToCalenderPage"
 xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
-Padding="20">
+Padding="20"
+Title="Add Appointment">
 <ContentPage.Content>
 <StackLayout>                
  <Entry x:Name="name" Placeholder="Name" Text="{Binding Name}"/>

@@ -23,7 +23,7 @@ namespace MobileFramework.ReminderPlugin
 		public ReminderPluginSettingsModel()
         {
             Name = PluginNames.ReminderPluginName;
-            SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source= ImageSource.FromFile("msm.jpg" )}};
+            SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source= ImageSource.FromFile("menu_reminder.png" )}};
         }
 
         public WidgetView AlarmWidget { get; set; }

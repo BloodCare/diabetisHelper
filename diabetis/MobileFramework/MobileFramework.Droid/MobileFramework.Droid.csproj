@@ -187,6 +187,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\menu_reminder.png" />
+    <AndroidResource Include="Resources\drawable\ic_event_note_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_alarm_add_white_48dp.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

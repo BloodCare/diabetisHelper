@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileFramework.ReminderPlugin.ReminderListPage"
-             Title="Reminders">
+             Title="Reminders"
+		xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms">
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness"
                 iOS="10,20,10,0"
@@ -30,11 +31,56 @@
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>
-      <StackLayout Orientation="Horizontal">
-        <Button x:Name="btnAddReminder" Command="{Binding AddReminder}" Text="Add Reminder" />
-        <Button x:Name="btnAddReminderToCalender" Command="{Binding AddReminderToCalender}" Text="Add To Calander" />
-        <Button Text="Add Emergency Reminder" />
+		
+      <StackLayout Padding= "5" Orientation="Horizontal">
+				 <controls:ImageButton x:Name="AddReminder"
+				 				Command="{Binding AddReminder}"
+								BackgroundColor= "#0488d1"
+								HorizontalOptions="StartAndExpand"
+								VerticalOptions="Start"
+								HeightRequest="50"
+                                  ImageHeightRequest="100"
+                                  ImageWidthRequest="120"
+									BorderRadius="44"
+                                  >
+                <controls:ImageButton.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.iOS>
+                            <FileImageSource File="ic_alarm_add_white_48dp.png" />
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            <FileImageSource File="ic_alarm_add_white_48dp.png" />
+                        </OnPlatform.Android>
+                    </OnPlatform>
+		</controls:ImageButton.Source>
+			</controls:ImageButton>
+				 <controls:ImageButton x:Name="AddCalendarAppointment"
+
+				 				Command="{Binding AddReminderToCalender}"
+								BackgroundColor= "#0488d1"
+								HorizontalOptions="EndAndExpand"
+								VerticalOptions="End"
+								HeightRequest="50"
+                                  ImageHeightRequest="100"
+                                  ImageWidthRequest="120"
+								BorderRadius="44"
+                                  >
+                <controls:ImageButton.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.iOS>
+                            <FileImageSource File="ic_event_note_white_48dp.png" />
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            <FileImageSource File="ic_event_note_white_48dp.png" />
+                        </OnPlatform.Android>
+                    </OnPlatform>
+		</controls:ImageButton.Source>
+			</controls:ImageButton>
+       <!-- <Button x:Name="btnAddReminder" Command="{Binding AddReminder}" Text="Add Reminder" />
+		<Button x:Name="btnAddReminderToCalender" Command="{Binding AddReminderToCalender}" Text="Add Appointment To Calander" />
+        <Button Text="Add Emergency Reminder" />-->
       </StackLayout>
     </StackLayout>
+		
   </ContentPage.Content>
 </ContentPage>
