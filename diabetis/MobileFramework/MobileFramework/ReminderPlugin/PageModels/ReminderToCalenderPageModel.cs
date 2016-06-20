@@ -18,7 +18,7 @@ namespace MobileFramework.ReminderPlugin
 
 		String _rName = string.Empty;
 		String _rDescription = string.Empty;
-		DateTime _Date = DateTime.Now;
+		DateTime _Date;
 		TimeSpan _Time;
 		IUserDialogs _userDialog;
 
@@ -59,7 +59,9 @@ namespace MobileFramework.ReminderPlugin
 				//test notification
 				return new Command( (value) =>
 					{
-						if (isvalidateDateTime(_Date))
+
+						var _rDateTime = new DateTime(_Date.Year, _Date.Month, _Date.Day, _Time.Hours, _Time.Minutes, _Time.Seconds);
+						if (isvalidateDateTime(_rDateTime))
 							_userDialog.ErrorToast("Please choose proper Date and Time", null, 2000);
 						else {
 							_userDialog.ShowSuccess("Event Added in Calendar", 2000);
