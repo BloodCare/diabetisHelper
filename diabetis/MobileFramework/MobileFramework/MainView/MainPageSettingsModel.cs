@@ -29,8 +29,8 @@ namespace MobileFramework.MainView
         public MainPageSettingsModel()
         {
             instance = this;
-            Name = PluginNames.MainPluginName;
-            SideBarItem = new NavigationSideBarItem() { Title = PluginNames.MainPluginName, Icon = new Image { Aspect = Aspect.AspectFit, Source= ImageSource.FromFile("msm.jpg")}};
+           // Name = PluginNames.MainPluginName;
+          //  SideBarItem = new NavigationSideBarItem() { Title = PluginNames.MainPluginName, Icon = new Image { Aspect = Aspect.AspectFit, Source= ImageSource.FromFile("msm.jpg")}};
         }
 
        

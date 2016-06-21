@@ -29,7 +29,7 @@ namespace MobileFramework.Navigation
         public NavigationPageModel(IPluginCollector pluginCollector)
         {
             pluginCollector = pluginCollector;
-            mainSettingsModel = pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MainPluginName).Select(x => x.Value).First();
+           // mainSettingsModel = pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MainPluginName).Select(x => x.Value).First();
             List<SettingsModel> settingsModels = pluginCollector.SettingsModels.Values.ToList();
             NavigationItems = (from item in settingsModels select item.SideBarItem).ToList();
         }

@@ -22,7 +22,7 @@ namespace MobileFramework.OverViewPlugin
         /// </summary>
         public OverviewPluginSettingsModel()
         {
-            Name = PluginNames.OverviewPluginName;
+           // Name = PluginNames.OverviewPluginName;
             SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source= ImageSource.FromFile("msm.jpg" )}};
         }
 

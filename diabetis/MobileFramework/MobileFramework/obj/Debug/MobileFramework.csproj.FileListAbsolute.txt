@@ -67,8 +67,6 @@ E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileF
 E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll
 E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.pdb
 E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.csprojResolveAssemblyReference.cache
-E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
-E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.pdb
 C:\Users\Marc-\Source\Repos\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\FreshIOC.dll
@@ -199,5 +197,29 @@ E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\Mo
 E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderEditPage.xaml.g.cs
 E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
 E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
-E:\git pull\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.ReminderPlugin.Pages.ReminderEditPage.xaml.g.cs
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.UserProfilePlugin.Pages.UserProfilePage.xaml.g.cs
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.UserProfilePlugin.UserProfilePluginPage.xaml.g.cs
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Acr.UserDialogs.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Acr.UserDialogs.Interface.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\ExifLib.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Splat.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLite-net.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLitePCL.batteries.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLitePCL.raw.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Core.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Forms.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Ioc.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Platform.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Serialization.dll
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Ioc.xml
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Core.xml
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Platform.xml
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Serialization.xml
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\XLabs.Forms.xml
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\Acr.UserDialogs.Interface.pdb
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\SQLite-net.xml
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\obj\Debug\MobileFramework.dll.mdb
+E:\Git\diabetisHelper\diabetis\MobileFramework\MobileFramework\bin\Debug\MobileFramework.dll.mdb

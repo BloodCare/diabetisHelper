@@ -29,7 +29,7 @@ namespace MobileFramework.MainView
         {
             Name = "MainPlugin";
             _pluginCollector = pluginCollector;
-            settingsModel = _pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MainPluginName).Select(x => x.Value).First();
+            //settingsModel = _pluginCollector.SettingsModels.Where(x => x.Key == PluginNames.MainPluginName).Select(x => x.Value).First();
 
         }
 

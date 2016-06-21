@@ -7,6 +7,7 @@ using MobileFramework.OverviewPlugin;
 using MobileFramework.PluginManager;
 using Xamarin.Forms;
 using MobileFramework.ReminderPlugin;
+using MobileFramework.UserProfilePlugin;
 using Acr.UserDialogs;
 
 namespace MobileFramework
@@ -27,10 +28,11 @@ namespace MobileFramework
             masterDetailNav.Init("Menu");
 
             //every Plugin has to be added like these
-            masterDetailNav.AddPage<MainPageModel>(PluginNames.MainPluginName, null);
-            masterDetailNav.AddPage<OverviewPluginPageModel>(PluginNames.OverviewPluginName, null);
+            //masterDetailNav.AddPage<MainPageModel>(PluginNames.MainPluginName, null);
+           // masterDetailNav.AddPage<OverviewPluginPageModel>(PluginNames.OverviewPluginName, null);
             masterDetailNav.AddPage<MonitoringPluginPageModel>(PluginNames.MonitoringPluginName, null);
 			masterDetailNav.AddPage<ReminderListPageModel>(PluginNames.ReminderPluginName, null);
+			masterDetailNav.AddPage<UserProfilePageModel>(PluginNames.UserProfilePluginName, null);
 
 
             //initialises the navigation Page

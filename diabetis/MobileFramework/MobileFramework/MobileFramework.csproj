@@ -134,6 +134,15 @@
     <Compile Include="ReminderPlugin\Pages\ReminderEditPage.xaml.cs">
       <DependentUpon>ReminderEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserProfilePlugin\PageModels\UserProfilePageModel.cs" />
+    <Compile Include="UserProfilePlugin\Pages\UserProfilePage.xaml.cs">
+      <DependentUpon>UserProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfilePlugin\UserProfilePluginPage.xaml.cs">
+      <DependentUpon>UserProfilePluginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfilePlugin\UserProfilePluginPageModel.cs" />
+    <Compile Include="UserProfilePlugin\UserProfilePluginSettingsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -164,6 +173,12 @@
     <EmbeddedResource Include="ReminderPlugin\Pages\ReminderEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserProfilePlugin\Pages\UserProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfilePlugin\UserProfilePluginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Navigation\NavigationPage.xaml">
@@ -186,6 +201,9 @@
   <ItemGroup>
     <Folder Include="Helpers\LanguageFiles\" />
     <Folder Include="OverviewPlugin\ViewElements\" />
+    <Folder Include="UserProfilePlugin\" />
+    <Folder Include="UserProfilePlugin\Pages\" />
+    <Folder Include="UserProfilePlugin\PageModels\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, PublicKeyToken=null">

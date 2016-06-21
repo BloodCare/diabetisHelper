@@ -35,7 +35,7 @@ namespace MobileFramework.OverviewPlugin
         /// <param name="model"></param>
         public OverviewPluginPageModel()
         {
-            Name = PluginNames.OverviewPluginName;
+           // Name = PluginNames.OverviewPluginName;
             
             
         }

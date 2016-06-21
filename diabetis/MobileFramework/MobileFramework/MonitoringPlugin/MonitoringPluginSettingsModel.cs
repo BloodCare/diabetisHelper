@@ -24,7 +24,7 @@ namespace MobileFramework.MonitoringPlugin
         public MonitoringPluginSettingsModel()
         {
             Name = PluginNames.MonitoringPluginName;
-            SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source = ImageSource.FromFile("msm.jpg") } };
+            SideBarItem = new NavigationSideBarItem() { Title = Name, Icon = new Image { Aspect = Aspect.AspectFit, Source = ImageSource.FromFile("monitoring.png") } };
             BloodSugarDataPoints = new List<BloodSugarDataPoint>();
             MealDataPoints = new List<MealDataPoint>();
             MedicineDataPoints = new List<MedicineDataPoint>();

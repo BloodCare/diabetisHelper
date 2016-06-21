@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MobileFramework.UserProfilePlugin.UserProfilePage" xmlns:local="clr-namespace:MobileFramework;assembly=MobileFramework"
+xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials" Padding="20" Title="User Profile">
+	<ContentPage.Content>
+	<StackLayout>
+	<Entry Placeholder="First Name" Text="{Binding firstName}"/>
+	<Entry Placeholder="Last Name" Text="{Binding lastName}"/>
+	 <Grid>
+  		<Grid.RowDefinitions>
+    	<RowDefinition Height="40" />
+    	<RowDefinition Height="40" />
+    	<RowDefinition Height="40" />
+    	<RowDefinition Height="40" />
+  		</Grid.RowDefinitions>
+  		<Grid.ColumnDefinitions>
+    	<ColumnDefinition Width="100" />
+    	<ColumnDefinition Width="100" />
+    	<ColumnDefinition Width="100" />
+  		</Grid.ColumnDefinitions>
+ 	 <controls:CheckBox DefaultText="Male" Grid.Row="0" Grid.Column="0" />
+ 	 <controls:CheckBox DefaultText="Female" Grid.Row="0" Grid.Column="1" />
+ 	 <controls:CheckBox DefaultText="Other" Grid.Row="0" Grid.Column="2" />
+ 	  <Label Text="DOB" Font="18" Grid.Row="1" Grid.Column="0"/>
+ 	 <DatePicker Date ="{Binding Date}" Format="D"  Grid.Row="1" Grid.Column="1">
+     	<DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+    </DatePicker>
+
+    <Label Text="Diabetes" Font="18" Grid.Row="2" Grid.Column="0"/>
+    <controls:CheckBox DefaultText="Type A" Grid.Row="2" Grid.Column="1" />
+ 	 <controls:CheckBox DefaultText="Type B" Grid.Row="2" Grid.Column="2" />
+
+ 	 <Entry Placeholder="Weight" Keyboard="Numeric"  Grid.Row="3" Grid.Column="0" />
+	</Grid>
+
+	<StackLayout Orientation="Horizontal">
+   		<Button x:Name="btnSaveReminder" Command="{Binding saveReminder}" Text="Save" TextColor="White" BackgroundColor="Green" WidthRequest="100" />
+  		<Button x:Name="btnCancelReminder" Command="{Binding cancelReminder}" Text="Cancel" TextColor="White" BackgroundColor="Gray" WidthRequest="100" />
+ 	</StackLayout>
+
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

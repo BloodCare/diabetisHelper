@@ -12,10 +12,11 @@ namespace MobileFramework.PluginManager
     /// </summary>
     public  class PluginNames
     {
-        public const String OverviewPluginName = "System Overview";
-        public const String MainPluginName = "Dashboard";
+        //public const String OverviewPluginName = "System Overview";
+       // public const String MainPluginName = "Dashboard";
         public const String MonitoringPluginName = "Monitoring";
 		public const String ReminderPluginName = "Reminder";
+		public const String UserProfilePluginName = "User Profile";
 
 
 
