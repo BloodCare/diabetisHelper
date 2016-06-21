@@ -43,6 +43,7 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     <Debugger>Xamarin</Debugger>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+<AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -183,13 +184,15 @@
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\menu_reminder.png" />
     <AndroidResource Include="Resources\drawable\ic_event_note_white_48dp.png" />
     <AndroidResource Include="Resources\drawable\ic_alarm_add_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_info_black_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_info_outline_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\blood_drop.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />

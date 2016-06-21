@@ -20,7 +20,7 @@ using Acr.UserDialogs;
 
 namespace MobileFramework.Droid
 {
-    [Activity(Label = "MobileFramework", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "BloodCare", Icon = "@drawable/blood_drop", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {   
         /// <summary>

@@ -31,13 +31,11 @@ namespace MobileFramework.Droid
 			// Set the summary text as feature label
 			textStyle.SetSummaryText(feature);
 
-
 			// Instantiate the builder and set notification elements:
 			Notification.Builder builder = new Notification.Builder(Android.App.Application.Context)
 				.SetContentIntent(contentIntent)
 				.SetContentTitle(title)
-				//.SetContentText(message)
-				.SetSmallIcon(Resource.Drawable.icon)
+				.SetSmallIcon(Resource.Drawable.ic_info_outline_white_48dp)
 				.SetDefaults(NotificationDefaults.Sound)
 				.SetShowWhen(true)
 				.SetAutoCancel(true)
